@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title></title>
+        <style type="text/css"></style>
+        <script src="tomato1.js" type="text/javascript"></script>
+        <script src="tomato2.js" type="text/javascript"></script>
+        <script src="tomato3.js" type="text/javascript"></script>
+        <body>
+            <div class="content">
+                <div class="nav">
+                    <ul>
+                        <li><a href=""><span></span></a></li>
+                        <li><a href=""><span></span></a></li>
+                        <li><a href=""><span></span></a></li>
+                        <li><a href=""><span></span></a></li>
+                        <li><a href=""><span></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="top"></div>
+                <div class="middle"></div>
+                <div class="bottom"></div>
+            </div>
+            <div class="main">
+                <div class="article">
+                    <h1>文章标题1</h1>
+                    <p></p>
+                </div>
+                <div class="article">
+                    <h1>文章标题2</h1>
+                    <p></p>
+                </div>
+                <div class="article">
+                    <h1>文章标题3</h1>
+                    <p></p>
+                </div>
+            </div>
+            <div class="footer">版权信息</div>
+        </body>
+    </head>
+</html>

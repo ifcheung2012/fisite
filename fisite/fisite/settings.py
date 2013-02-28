@@ -1,4 +1,5 @@
 # Django settings for fisite project.
+import os.path
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -11,6 +12,7 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
+        #'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': '',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
@@ -28,7 +30,8 @@ ALLOWED_HOSTS = []
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'America/Chicago'
+#TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Asia/Shanghai'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -82,7 +85,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'svc*n3rnmi9#7n+jz)%sj3lm7zwga&amp;3v_n(lwjs+x5jdnr%ll1'
+SECRET_KEY = '8j%%uxu@938voqd^=o%ofv3_=qc_ste)7m0um%=eyfg8hw&amp;xx_'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -107,6 +110,8 @@ ROOT_URLCONF = 'fisite.urls'
 WSGI_APPLICATION = 'fisite.wsgi.application'
 
 TEMPLATE_DIRS = (
+    #'/home/ifcheung/Desktop/mydjango/fisite/fisite/'
+    os.path.join(os.path.dirname(__file__),'templates').replace('\\','/')
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
