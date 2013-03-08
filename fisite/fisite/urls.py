@@ -1,11 +1,15 @@
 from django.conf.urls import patterns, include, url
-from .views import hello,current_datetime,hours_ahead
+from .views import hello,current_datetime,hours_ahead,search_form,search,contact
 # Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = patterns('',
     ('^hello/$',hello),
+    (r'^admin/',include(admin.site.urls)),
+    ('^search-form/$',search_form),
+    ('^search/$',search),
+    ('^contact/$',contact),
     ('^time/$',current_datetime),
      (r'^time/plus/(\d{1,2})/$',hours_ahead),
 
