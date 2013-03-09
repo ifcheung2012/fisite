@@ -21,7 +21,7 @@ class Author(models.Model):
 
 class BookManager(models.Manager):
     def titlecount(self,keyword):
-       return self.filter(title__icontains=keyword).count()
+        return self.filter(title__icontains=keyword).count()
 
 class Book(models.Model):
     title = models.CharField(max_length=100)

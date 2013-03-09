@@ -21,5 +21,14 @@ class ImageTline(models.Model):
     def __unicode__(self):
         return self.imgname
 
+class Post(models.Model):
+    title = models.CharField(max_length=100, blank=True,null=True)
+    content = models.TextField(blank=True)
+    creatime = models.DateTimeField(auto_now_add=True, auto_now=True, blank=True, null=True)
+    userid = models.IntegerField()
+    lastupdatime = models.DateTimeField(auto_now_add=True, auto_now=True, blank=True, null=True)
+    def __unicode__(self):
+        return self.title
+
 
 
