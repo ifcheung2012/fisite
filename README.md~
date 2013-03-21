@@ -19,6 +19,7 @@ fiblog
     `table3
 =======
 ok let roll !
->head1
->>head2
->>>head3
+======
+>>>>>>> c00ae6579713e1b02765c9b4a7edf2c99ac82602
+
+--

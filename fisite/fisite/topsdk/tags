@@ -1,0 +1,176 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AreasGetRequest	top/api/rest/AreasGetRequest.py	/^class AreasGetRequest(RestApi):$/;"	c
+CategoryrecommendItemsGetRequest	top/api/rest/CategoryrecommendItemsGetRequest.py	/^class CategoryrecommendItemsGetRequest(RestApi):$/;"	c
+FeedbackAddRequest	top/api/rest/FeedbackAddRequest.py	/^class FeedbackAddRequest(RestApi):$/;"	c
+FileItem	top/api/base.py	/^class FileItem(object):$/;"	c
+ItemGetRequest	top/api/rest/ItemGetRequest.py	/^class ItemGetRequest(RestApi):$/;"	c
+ItemSkuGetRequest	top/api/rest/ItemSkuGetRequest.py	/^class ItemSkuGetRequest(RestApi):$/;"	c
+ItemSkusGetRequest	top/api/rest/ItemSkusGetRequest.py	/^class ItemSkusGetRequest(RestApi):$/;"	c
+ItemcatsGetRequest	top/api/rest/ItemcatsGetRequest.py	/^class ItemcatsGetRequest(RestApi):$/;"	c
+ItempropsGetRequest	top/api/rest/ItempropsGetRequest.py	/^class ItempropsGetRequest(RestApi):$/;"	c
+ItempropvaluesGetRequest	top/api/rest/ItempropvaluesGetRequest.py	/^class ItempropvaluesGetRequest(RestApi):$/;"	c
+ItemrecommendItemsGetRequest	top/api/rest/ItemrecommendItemsGetRequest.py	/^class ItemrecommendItemsGetRequest(RestApi):$/;"	c
+ItemsListGetRequest	top/api/rest/ItemsListGetRequest.py	/^class ItemsListGetRequest(RestApi):$/;"	c
+KfcKeywordSearchRequest	top/api/rest/KfcKeywordSearchRequest.py	/^class KfcKeywordSearchRequest(RestApi):$/;"	c
+MultiPartForm	top/api/base.py	/^class MultiPartForm(object):$/;"	c
+N_REST	top/api/base.py	/^N_REST = '\/router\/rest'$/;"	v
+P_ACCESS_TOKEN	top/api/base.py	/^P_ACCESS_TOKEN = "access_token"$/;"	v
+P_API	top/api/base.py	/^P_API = "method"$/;"	v
+P_APPKEY	top/api/base.py	/^P_APPKEY = "app_key"$/;"	v
+P_CODE	top/api/base.py	/^P_CODE = 'code'$/;"	v
+P_FORMAT	top/api/base.py	/^P_FORMAT = "format"$/;"	v
+P_MSG	top/api/base.py	/^P_MSG = 'msg'$/;"	v
+P_PARTNER_ID	top/api/base.py	/^P_PARTNER_ID = "partner_id"$/;"	v
+P_SESSION	top/api/base.py	/^P_SESSION = "session"$/;"	v
+P_SIGN	top/api/base.py	/^P_SIGN = "sign"$/;"	v
+P_SIGN_METHOD	top/api/base.py	/^P_SIGN_METHOD = "sign_method"$/;"	v
+P_SUB_CODE	top/api/base.py	/^P_SUB_CODE = 'sub_code'$/;"	v
+P_SUB_MSG	top/api/base.py	/^P_SUB_MSG = 'sub_msg'$/;"	v
+P_TIMESTAMP	top/api/base.py	/^P_TIMESTAMP = "timestamp"$/;"	v
+P_VERSION	top/api/base.py	/^P_VERSION = "v"$/;"	v
+RequestException	top/api/base.py	/^class RequestException(Exception):$/;"	c
+RestApi	top/api/base.py	/^class RestApi(object):$/;"	c
+SYSTEM_GENERATE_VERSION	top/api/base.py	/^SYSTEM_GENERATE_VERSION = "taobao-sdk-python-20130320"$/;"	v
+SellercatsListGetRequest	top/api/rest/SellercatsListGetRequest.py	/^class SellercatsListGetRequest(RestApi):$/;"	c
+ShopGetRequest	top/api/rest/ShopGetRequest.py	/^class ShopGetRequest(RestApi):$/;"	c
+ShopcatsListGetRequest	top/api/rest/ShopcatsListGetRequest.py	/^class ShopcatsListGetRequest(RestApi):$/;"	c
+ShoprecommendItemsGetRequest	top/api/rest/ShoprecommendItemsGetRequest.py	/^class ShoprecommendItemsGetRequest(RestApi):$/;"	c
+ShoprecommendShopsGetRequest	top/api/rest/ShoprecommendShopsGetRequest.py	/^class ShoprecommendShopsGetRequest(RestApi):$/;"	c
+TaobaokeCaturlGetRequest	top/api/rest/TaobaokeCaturlGetRequest.py	/^class TaobaokeCaturlGetRequest(RestApi):$/;"	c
+TaobaokeItemsCouponGetRequest	top/api/rest/TaobaokeItemsCouponGetRequest.py	/^class TaobaokeItemsCouponGetRequest(RestApi):$/;"	c
+TaobaokeItemsDetailGetRequest	top/api/rest/TaobaokeItemsDetailGetRequest.py	/^class TaobaokeItemsDetailGetRequest(RestApi):$/;"	c
+TaobaokeItemsGetRequest	top/api/rest/TaobaokeItemsGetRequest.py	/^class TaobaokeItemsGetRequest(RestApi):$/;"	c
+TaobaokeItemsRelateGetRequest	top/api/rest/TaobaokeItemsRelateGetRequest.py	/^class TaobaokeItemsRelateGetRequest(RestApi):$/;"	c
+TaobaokeListurlGetRequest	top/api/rest/TaobaokeListurlGetRequest.py	/^class TaobaokeListurlGetRequest(RestApi):$/;"	c
+TaobaokeReportGetRequest	top/api/rest/TaobaokeReportGetRequest.py	/^class TaobaokeReportGetRequest(RestApi):$/;"	c
+TaobaokeShopsGetRequest	top/api/rest/TaobaokeShopsGetRequest.py	/^class TaobaokeShopsGetRequest(RestApi):$/;"	c
+TaobaokeShopsRelateGetRequest	top/api/rest/TaobaokeShopsRelateGetRequest.py	/^class TaobaokeShopsRelateGetRequest(RestApi):$/;"	c
+TaobaokeWidgetItemsConvertRequest	top/api/rest/TaobaokeWidgetItemsConvertRequest.py	/^class TaobaokeWidgetItemsConvertRequest(RestApi):$/;"	c
+TaobaokeWidgetShopsConvertRequest	top/api/rest/TaobaokeWidgetShopsConvertRequest.py	/^class TaobaokeWidgetShopsConvertRequest(RestApi):$/;"	c
+TaobaokeWidgetUrlConvertRequest	top/api/rest/TaobaokeWidgetUrlConvertRequest.py	/^class TaobaokeWidgetUrlConvertRequest(RestApi):$/;"	c
+TimeGetRequest	top/api/rest/TimeGetRequest.py	/^class TimeGetRequest(RestApi):$/;"	c
+TmallItemsDiscountSearchRequest	top/api/rest/TmallItemsDiscountSearchRequest.py	/^class TmallItemsDiscountSearchRequest(RestApi):$/;"	c
+TmallSelectedItemsSearchRequest	top/api/rest/TmallSelectedItemsSearchRequest.py	/^class TmallSelectedItemsSearchRequest(RestApi):$/;"	c
+TmallTemaiItemsSearchRequest	top/api/rest/TmallTemaiItemsSearchRequest.py	/^class TmallTemaiItemsSearchRequest(RestApi):$/;"	c
+TmallTemaiSubcatsSearchRequest	top/api/rest/TmallTemaiSubcatsSearchRequest.py	/^class TmallTemaiSubcatsSearchRequest(RestApi):$/;"	c
+TopException	top/api/base.py	/^class TopException(Exception):$/;"	c
+TopatsResultGetRequest	top/api/rest/TopatsResultGetRequest.py	/^class TopatsResultGetRequest(RestApi):$/;"	c
+UmpPromotionGetRequest	top/api/rest/UmpPromotionGetRequest.py	/^class UmpPromotionGetRequest(RestApi):$/;"	c
+UserBuyerGetRequest	top/api/rest/UserBuyerGetRequest.py	/^class UserBuyerGetRequest(RestApi):$/;"	c
+UserrecommendItemsGetRequest	top/api/rest/UserrecommendItemsGetRequest.py	/^class UserrecommendItemsGetRequest(RestApi):$/;"	c
+WidgetAppapiruleCheckRequest	top/api/rest/WidgetAppapiruleCheckRequest.py	/^class WidgetAppapiruleCheckRequest(RestApi):$/;"	c
+WidgetLoginstatusGetRequest	top/api/rest/WidgetLoginstatusGetRequest.py	/^class WidgetLoginstatusGetRequest(RestApi):$/;"	c
+__init__	top/__init__.py	/^    def __init__(self,appkey,secret):$/;"	m	class:appinfo
+__init__	top/api/base.py	/^    def __init__(self):$/;"	m	class:MultiPartForm
+__init__	top/api/base.py	/^    def __init__(self):$/;"	m	class:TopException
+__init__	top/api/base.py	/^    def __init__(self, domain='gw.api.taobao.com', port = 80):$/;"	m	class:RestApi
+__init__	top/api/base.py	/^    def __init__(self,filename=None,content=None):$/;"	m	class:FileItem
+__init__	top/api/rest/AreasGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:AreasGetRequest
+__init__	top/api/rest/CategoryrecommendItemsGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:CategoryrecommendItemsGetRequest
+__init__	top/api/rest/FeedbackAddRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:FeedbackAddRequest
+__init__	top/api/rest/ItemGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:ItemGetRequest
+__init__	top/api/rest/ItemSkuGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:ItemSkuGetRequest
+__init__	top/api/rest/ItemSkusGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:ItemSkusGetRequest
+__init__	top/api/rest/ItemcatsGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:ItemcatsGetRequest
+__init__	top/api/rest/ItempropsGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:ItempropsGetRequest
+__init__	top/api/rest/ItempropvaluesGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:ItempropvaluesGetRequest
+__init__	top/api/rest/ItemrecommendItemsGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:ItemrecommendItemsGetRequest
+__init__	top/api/rest/ItemsListGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:ItemsListGetRequest
+__init__	top/api/rest/KfcKeywordSearchRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:KfcKeywordSearchRequest
+__init__	top/api/rest/SellercatsListGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:SellercatsListGetRequest
+__init__	top/api/rest/ShopGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:ShopGetRequest
+__init__	top/api/rest/ShopcatsListGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:ShopcatsListGetRequest
+__init__	top/api/rest/ShoprecommendItemsGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:ShoprecommendItemsGetRequest
+__init__	top/api/rest/ShoprecommendShopsGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:ShoprecommendShopsGetRequest
+__init__	top/api/rest/TaobaokeCaturlGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:TaobaokeCaturlGetRequest
+__init__	top/api/rest/TaobaokeItemsCouponGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:TaobaokeItemsCouponGetRequest
+__init__	top/api/rest/TaobaokeItemsDetailGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:TaobaokeItemsDetailGetRequest
+__init__	top/api/rest/TaobaokeItemsGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:TaobaokeItemsGetRequest
+__init__	top/api/rest/TaobaokeItemsRelateGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:TaobaokeItemsRelateGetRequest
+__init__	top/api/rest/TaobaokeListurlGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:TaobaokeListurlGetRequest
+__init__	top/api/rest/TaobaokeReportGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:TaobaokeReportGetRequest
+__init__	top/api/rest/TaobaokeShopsGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:TaobaokeShopsGetRequest
+__init__	top/api/rest/TaobaokeShopsRelateGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:TaobaokeShopsRelateGetRequest
+__init__	top/api/rest/TaobaokeWidgetItemsConvertRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:TaobaokeWidgetItemsConvertRequest
+__init__	top/api/rest/TaobaokeWidgetShopsConvertRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:TaobaokeWidgetShopsConvertRequest
+__init__	top/api/rest/TaobaokeWidgetUrlConvertRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:TaobaokeWidgetUrlConvertRequest
+__init__	top/api/rest/TimeGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:TimeGetRequest
+__init__	top/api/rest/TmallItemsDiscountSearchRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:TmallItemsDiscountSearchRequest
+__init__	top/api/rest/TmallSelectedItemsSearchRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:TmallSelectedItemsSearchRequest
+__init__	top/api/rest/TmallTemaiItemsSearchRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:TmallTemaiItemsSearchRequest
+__init__	top/api/rest/TmallTemaiSubcatsSearchRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:TmallTemaiSubcatsSearchRequest
+__init__	top/api/rest/TopatsResultGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:TopatsResultGetRequest
+__init__	top/api/rest/UmpPromotionGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:UmpPromotionGetRequest
+__init__	top/api/rest/UserBuyerGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:UserBuyerGetRequest
+__init__	top/api/rest/UserrecommendItemsGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:UserrecommendItemsGetRequest
+__init__	top/api/rest/WidgetAppapiruleCheckRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:WidgetAppapiruleCheckRequest
+__init__	top/api/rest/WidgetLoginstatusGetRequest.py	/^	def __init__(self,domain='gw.api.taobao.com',port=80):$/;"	m	class:WidgetLoginstatusGetRequest
+__str__	top/api/base.py	/^    def __str__(self):$/;"	m	class:MultiPartForm	file:
+__str__	top/api/base.py	/^    def __str__(self, *args, **kwargs):$/;"	m	class:TopException	file:
+_check_requst	top/api/base.py	/^    def _check_requst(self):$/;"	m	class:RestApi
+a	test.py	/^a= top.api.ShopGetRequest()$/;"	v
+add_field	top/api/base.py	/^    def add_field(self, name, value):$/;"	m	class:MultiPartForm
+add_file	top/api/base.py	/^    def add_file(self, fieldname, filename, fileHandle, mimetype=None):$/;"	m	class:MultiPartForm
+appinfo	top/__init__.py	/^class appinfo(object):$/;"	c
+appkey	tbk.py	/^appkey = "1012129701"$/;"	v
+f	test.py	/^    f= a.getResponse()$/;"	v
+getApplicationParameters	top/api/base.py	/^    def getApplicationParameters(self):$/;"	m	class:RestApi
+getDefaultAppInfo	top/__init__.py	/^def getDefaultAppInfo():$/;"	f
+getMultipartParas	top/api/base.py	/^    def getMultipartParas(self):$/;"	m	class:RestApi
+getResponse	top/api/base.py	/^    def getResponse(self, authrize=None, timeout=30):$/;"	m	class:RestApi
+get_content_type	top/api/base.py	/^    def get_content_type(self):$/;"	m	class:MultiPartForm
+get_request_header	top/api/base.py	/^    def get_request_header(self):$/;"	m	class:RestApi
+getapiname	top/api/base.py	/^    def getapiname(self):$/;"	m	class:RestApi
+getapiname	top/api/rest/AreasGetRequest.py	/^	def getapiname(self):$/;"	m	class:AreasGetRequest
+getapiname	top/api/rest/CategoryrecommendItemsGetRequest.py	/^	def getapiname(self):$/;"	m	class:CategoryrecommendItemsGetRequest
+getapiname	top/api/rest/FeedbackAddRequest.py	/^	def getapiname(self):$/;"	m	class:FeedbackAddRequest
+getapiname	top/api/rest/ItemGetRequest.py	/^	def getapiname(self):$/;"	m	class:ItemGetRequest
+getapiname	top/api/rest/ItemSkuGetRequest.py	/^	def getapiname(self):$/;"	m	class:ItemSkuGetRequest
+getapiname	top/api/rest/ItemSkusGetRequest.py	/^	def getapiname(self):$/;"	m	class:ItemSkusGetRequest
+getapiname	top/api/rest/ItemcatsGetRequest.py	/^	def getapiname(self):$/;"	m	class:ItemcatsGetRequest
+getapiname	top/api/rest/ItempropsGetRequest.py	/^	def getapiname(self):$/;"	m	class:ItempropsGetRequest
+getapiname	top/api/rest/ItempropvaluesGetRequest.py	/^	def getapiname(self):$/;"	m	class:ItempropvaluesGetRequest
+getapiname	top/api/rest/ItemrecommendItemsGetRequest.py	/^	def getapiname(self):$/;"	m	class:ItemrecommendItemsGetRequest
+getapiname	top/api/rest/ItemsListGetRequest.py	/^	def getapiname(self):$/;"	m	class:ItemsListGetRequest
+getapiname	top/api/rest/KfcKeywordSearchRequest.py	/^	def getapiname(self):$/;"	m	class:KfcKeywordSearchRequest
+getapiname	top/api/rest/SellercatsListGetRequest.py	/^	def getapiname(self):$/;"	m	class:SellercatsListGetRequest
+getapiname	top/api/rest/ShopGetRequest.py	/^	def getapiname(self):$/;"	m	class:ShopGetRequest
+getapiname	top/api/rest/ShopcatsListGetRequest.py	/^	def getapiname(self):$/;"	m	class:ShopcatsListGetRequest
+getapiname	top/api/rest/ShoprecommendItemsGetRequest.py	/^	def getapiname(self):$/;"	m	class:ShoprecommendItemsGetRequest
+getapiname	top/api/rest/ShoprecommendShopsGetRequest.py	/^	def getapiname(self):$/;"	m	class:ShoprecommendShopsGetRequest
+getapiname	top/api/rest/TaobaokeCaturlGetRequest.py	/^	def getapiname(self):$/;"	m	class:TaobaokeCaturlGetRequest
+getapiname	top/api/rest/TaobaokeItemsCouponGetRequest.py	/^	def getapiname(self):$/;"	m	class:TaobaokeItemsCouponGetRequest
+getapiname	top/api/rest/TaobaokeItemsDetailGetRequest.py	/^	def getapiname(self):$/;"	m	class:TaobaokeItemsDetailGetRequest
+getapiname	top/api/rest/TaobaokeItemsGetRequest.py	/^	def getapiname(self):$/;"	m	class:TaobaokeItemsGetRequest
+getapiname	top/api/rest/TaobaokeItemsRelateGetRequest.py	/^	def getapiname(self):$/;"	m	class:TaobaokeItemsRelateGetRequest
+getapiname	top/api/rest/TaobaokeListurlGetRequest.py	/^	def getapiname(self):$/;"	m	class:TaobaokeListurlGetRequest
+getapiname	top/api/rest/TaobaokeReportGetRequest.py	/^	def getapiname(self):$/;"	m	class:TaobaokeReportGetRequest
+getapiname	top/api/rest/TaobaokeShopsGetRequest.py	/^	def getapiname(self):$/;"	m	class:TaobaokeShopsGetRequest
+getapiname	top/api/rest/TaobaokeShopsRelateGetRequest.py	/^	def getapiname(self):$/;"	m	class:TaobaokeShopsRelateGetRequest
+getapiname	top/api/rest/TaobaokeWidgetItemsConvertRequest.py	/^	def getapiname(self):$/;"	m	class:TaobaokeWidgetItemsConvertRequest
+getapiname	top/api/rest/TaobaokeWidgetShopsConvertRequest.py	/^	def getapiname(self):$/;"	m	class:TaobaokeWidgetShopsConvertRequest
+getapiname	top/api/rest/TaobaokeWidgetUrlConvertRequest.py	/^	def getapiname(self):$/;"	m	class:TaobaokeWidgetUrlConvertRequest
+getapiname	top/api/rest/TimeGetRequest.py	/^	def getapiname(self):$/;"	m	class:TimeGetRequest
+getapiname	top/api/rest/TmallItemsDiscountSearchRequest.py	/^	def getapiname(self):$/;"	m	class:TmallItemsDiscountSearchRequest
+getapiname	top/api/rest/TmallSelectedItemsSearchRequest.py	/^	def getapiname(self):$/;"	m	class:TmallSelectedItemsSearchRequest
+getapiname	top/api/rest/TmallTemaiItemsSearchRequest.py	/^	def getapiname(self):$/;"	m	class:TmallTemaiItemsSearchRequest
+getapiname	top/api/rest/TmallTemaiSubcatsSearchRequest.py	/^	def getapiname(self):$/;"	m	class:TmallTemaiSubcatsSearchRequest
+getapiname	top/api/rest/TopatsResultGetRequest.py	/^	def getapiname(self):$/;"	m	class:TopatsResultGetRequest
+getapiname	top/api/rest/UmpPromotionGetRequest.py	/^	def getapiname(self):$/;"	m	class:UmpPromotionGetRequest
+getapiname	top/api/rest/UserBuyerGetRequest.py	/^	def getapiname(self):$/;"	m	class:UserBuyerGetRequest
+getapiname	top/api/rest/UserrecommendItemsGetRequest.py	/^	def getapiname(self):$/;"	m	class:UserrecommendItemsGetRequest
+getapiname	top/api/rest/WidgetAppapiruleCheckRequest.py	/^	def getapiname(self):$/;"	m	class:WidgetAppapiruleCheckRequest
+getapiname	top/api/rest/WidgetLoginstatusGetRequest.py	/^	def getapiname(self):$/;"	m	class:WidgetLoginstatusGetRequest
+mixStr	top/api/base.py	/^def mixStr(pstr):$/;"	f
+port	tbk.py	/^port=80$/;"	v
+req	tbk.py	/^req=top.api.TaobaokeItemsGetRequest(url,port)$/;"	v
+resp	tbk.py	/^    resp= req.getResponse()$/;"	v
+secret	tbk.py	/^secret = ""$/;"	v
+setDefaultAppInfo	top/__init__.py	/^def setDefaultAppInfo(appkey,secret):$/;"	f
+set_app_info	top/api/base.py	/^    def set_app_info(self, appinfo):$/;"	m	class:RestApi
+sign	top/api/base.py	/^def sign(secret, parameters):$/;"	f
