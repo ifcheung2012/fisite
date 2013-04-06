@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>ordering notice</title>
+    </head>
+    <body>
+    <ul>
+        <li id="id1">$cursor$</li>
+        <li id="id2"></li>
+        <li id="id3"></li>
+    </ul>
+        <h1>ordering notice</h1>
+        <p>Dear {{person_name}}</p> <p>Thanks for placing an order from {{company}},it's
+        scheduled to ship on {{ship_date |date:"F j,Y"}}</p>
+        <p>here are the items you've ordered</p>
+        <ul>
+        {% for item in item_list %}
+            <li>{{item}}</li>
+        {% endfor %}
+        </ul>
+        {% if ordered_warranty %}
+            <p>your warranty information will be include in the packaging.</p>
+        {% else %}
+            <p>you didnt order a warranty.</p>
+        {% endif %}
+        <p>sincerely<br />{{company}}</p>
+    </body>
+</html>
