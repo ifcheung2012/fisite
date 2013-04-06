@@ -49,43 +49,41 @@ from time import time
 #print time()-t
 
 print "4. character's join() replace '+'"
-t=time()
-s=""
-list = ['a','b','b','d','e','f','g','h','i','j','k','l','m','n']
+t = time()
+s = ""
+list = ['a', 'b', 'b', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n']
 for i in range(100000):
     for substr in list:
-        s +=substr
+        s += substr
 print "4.1 total run time:"
-print time()-t
-t=time()
-s=""
-list = ['a','b','b','d','e','f','g','h','i','j','k','l','m','n']
+print time() - t
+t = time()
+s = ""
+list = ['a', 'b', 'b', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n']
 for i in range(100000):
     for substr in list:
         s = s.join(substr)
 print "4.2 total run time:"
-print time()-t
-
-
-
+print time() - t
 
 print "5. list comprehension and generator expression"
-t=time()
-list = ['a','b','b','d','e','f','g','h','i','j','k','l','m','n']
-total= []
+t = time()
+list = ['a', 'b', 'b', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n']
+total = []
 for i in range(100000):
     for w in list:
         total.append(w)
 print "5.1 total run time 1:"
-print time()-t
+print time() - t
 
-t=time()
-list = ['a','b','b','d','e','f','g','h','i','j','k','l','m','n']
-total= []
+t = time()
+list = ['a', 'b', 'b', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n']
+total = []
 for i in range(100000):
     total = [w for w in list]
+#import pdb; pdb.set_trace()  # XXX BREAKPOINT
 print "5.2 total run time 2:"
-print time()-t
+print time() - t
 
 
 #import profile

@@ -1,4 +1,4 @@
-from Django.db import models
+from django.db import models
 
 class Publisher(models.Model):
     name = models.CharField(max_length=30)

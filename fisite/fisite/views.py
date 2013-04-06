@@ -39,6 +39,7 @@ def search(request):
     return HttpResponse(message)
 
 def current_datetime(request):
+    import pdb; pdb.set_trace()  # XXX BREAKPOINT
     now=datetime.datetime.now()
     #t=get_template('current_datetime.html')
     #html=t.render(Context({'current_date':now}))
