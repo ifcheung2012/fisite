@@ -1,6 +1,7 @@
-€}q(Uimages.models]q(U
-ImageTlineqUImageUpqeUbooks.admin]q(U	BookAdminqUAuthorAdminqeUsettings]q(UMANAGERSq	ULANGUAGE_CODEq
-USITE_IDqUROOT_URLCONFqUMIDDLEWARE_CLASSESqUUSE_I18NqU
-SECRET_KEYqUSTATIC_ROOTqU	TIME_ZONEqUTEMPLATE_LOADERSqU	DATABASESqUWSGI_APPLICATIONqUALLOWED_HOSTSqUTEMPLATE_DIRSqUCACHE_BACKENDqULOGGINGqUSTATICFILES_FINDERSqU
-STATIC_URLqUUSE_L10NqUDEBUGqUUSE_TZqUINSTALLED_APPSqU
-MEDIA_ROOTqUSTATICFILES_DIRSq UADMINSq!UTEMPLATE_DEBUGq"U	MEDIA_URLq#eUbooks.models]q$(U	Publisherq%UBookManagerq&UBookq'UAuthorq(eUviews]q)(Uhours_aheadq*Ucurrent_datetimeq+Uhelloq,eu.
+€}q(U
+topsdk.top]q(UsetDefaultAppInfoqUappinfoqUgetDefaultAppInfoqeUimages.models]q(U
+ImageTlineqUImageUpqeUviews]q	(Usearchq
+Uhours_aheadqUsearch_formqUcurrent_datetimeqUcontactqUhelloqUtbkitemlistqeUsettings]q(UMANAGERSqULANGUAGE_CODEqUSITE_IDqUROOT_URLCONFqUMIDDLEWARE_CLASSESqUUSE_I18NqU
+SECRET_KEYqUSTATIC_ROOTqU	TIME_ZONEqUTEMPLATE_LOADERSqU	DATABASESqUWSGI_APPLICATIONqUALLOWED_HOSTSqUTEMPLATE_DIRSqUCACHE_BACKENDq ULOGGINGq!USTATICFILES_FINDERSq"U
+STATIC_URLq#UUSE_L10Nq$UDEBUGq%UUSE_TZq&UINSTALLED_APPSq'U
+MEDIA_ROOTq(USTATICFILES_DIRSq)UADMINSq*UTEMPLATE_DEBUGq+U	MEDIA_URLq,eUbooks.admin]q-(U	BookAdminq.UAuthorAdminq/eUurls]q0Uurlpatternsq1aUbooks.models]q2(U	Publisherq3UBookManagerq4UBookq5UAuthorq6eu.
