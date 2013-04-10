@@ -15,8 +15,14 @@
 #
 #
 #
-
-
+import sys
+print sys.maxint
+a1,b1 = 3,5
+c1 = a1 if a1>b1 else b1
+a1 = '0'
+bores = True if a1 else False
+print bores
+print 'greater is :',c1
 def fab(max):
     n, a, b = 0, 0, 1
     while n < max:

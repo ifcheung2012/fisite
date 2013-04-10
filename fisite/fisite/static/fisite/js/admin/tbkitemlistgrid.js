@@ -5,7 +5,12 @@
  * Time: 下午1:02
  * To change this template use File | Settings | File Templates.
  */
+function qq(value,name){
+    alert(value+":"+name)
+}
 
+var searchWin;
+var searchForm;
 var grid;
 
 $(function () {
@@ -13,12 +18,12 @@ $(function () {
         title: '淘宝数据管理',
         iconCls: 'icon-save',
         methord: 'post',
-        url: 'http://127.0.0.1:8000/tbkitemlistres/',
+
         sortName: 'nick',
         sortOrder: 'desc',
         idField: 'num_iid',
         pageSize: 20,
-        toolbar:'#tb',
+        toolbar:toolbar,
         showFooter: true,
         nowrap:false,
         striped: true,
@@ -72,7 +77,20 @@ $(function () {
         singleSelect: false,
         onLoadSuccess: onLoadSuccess
     });
+    searchWin = $('#search-window').window({
+        iconCls: 'icon-search',
+        closed: true,
+        modal: true
+    });
+    searchForm = searchWin.find('searchform');
+
+    $('body').layout();
 })
+
+function OpensearchWin() {
+    searchWin.window('open');
+    searchForm.form('clear');
+}
 
 
 function onLoadSuccess(data){
@@ -130,16 +148,65 @@ function pagerFilter(data){
 }
 
 var toolbar = [{
-    text:'Add',
+    text: '数据采集',
+    iconCls: 'icon-search',
+    handler: OpensearchWin
+    }, '-',{
+    text:'入商品库',
     iconCls:'icon-add',
     handler:function(){alert('add')}
-},{
-    text:'Cut',
-    iconCls:'icon-cut',
-    handler:function(){alert('cut')}
-},'-',{
-    text:'Save',
-    iconCls:'icon-save',
-    handler:function(){alert('save')}
-}];
+    }];
 
+
+function showAll(){
+    grid.datagrid({
+        url: 'http://127.0.0.1:8000/tbkitemlistres/'
+    })
+}
+function SearchOK() {
+    var start_commissionRate = $("#start_commissionRate").val();
+    var end_commissionRate = $("#end_commissionRate").val();
+    var start_commissionNum = $("#start_commissionNum").val();
+    var end_commissionNum = $("#end_commissionNum").val();
+    var start_totalnum = $("#start_totalnum").val();
+    var end_totalnum = $("#end_totalnum").val();
+    var start_credit = $("#start_credit").combobox("getValue");
+    var end_credit = $('#end_credit').combobox('getValue');
+    var start_price = $("#start_price").val();
+    var end_price = $("#end_price").val();
+    var mall_item         =   ($("#mall_item").attr("checked")=="checked")?1:0 ;
+    var guarantee         =   ($("#guarantee").attr("checked")=="checked")?1:0 ;
+    var sevendays_return  =   ($("#sevendays_return").attr("checked")=="checked")?1:0  ;
+    var real_describe     =   ($("#real_describe").attr("checked")=="checked")?1:0   ;
+    var cash_coupon       =   ($("#cash_coupon").attr("checked")=="checked")?1:0     ;
+
+
+    searchWin.window('close');
+    grid.datagrid({ url: 'http://127.0.0.1:8000/tbkitemlistres/' ,
+        queryParams: {
+            start_commissionRate: start_commissionRate,
+            end_commissionRate  : end_commissionNum,
+            start_commissionNum : start_commissionNum,
+            end_commissionNum   : end_commissionNum,
+            start_totalnum      : start_totalnum,
+            end_totalnum        : end_totalnum,
+            start_credit        : start_credit,
+            end_credit          : end_credit,
+            start_price         : start_price,
+            end_price           : end_price,
+            mall_item           : mall_item,
+            guarantee           : guarantee,
+            sevendays_return    : sevendays_return,
+            real_describe       : real_describe,
+            cash_coupon         : cash_coupon
+
+        }
+    });
+}
+function closeSearchWindow() {
+    searchWin.window('close');
+}
+function clearform(){
+    alert(($("#mall_item").attr("checked")=="checked")?1:0) ;
+    searchForm.form('clear');
+}

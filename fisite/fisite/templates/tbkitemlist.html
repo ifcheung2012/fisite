@@ -19,29 +19,108 @@
 <div style="margin:10px 0;"></div>
 
 <div id="tb" style="padding:5px;height:auto">
-    <div style="margin-bottom:5px">
-        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true"></a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true"></a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="true"></a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="true"></a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true"></a>
-    </div>
-    <div>
-        Date From: <input class="easyui-datebox" style="width:80px">
-        To: <input class="easyui-datebox" style="width:80px"><br>
-        关键词:  <input class="easyui-validatebox" type="text" name="name" data-options="required:true"></input>
-        Language:
-        <select class="easyui-combobox" panelHeight="auto" style="width:100px">
-            <option value="java">Java</option>
-            <option value="c">C</option>
-            <option value="basic">Basic</option>
-            <option value="perl">Perl</option>
-            <option value="python">Python</option>
-        </select>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-search">Search</a>
+    <div id="search-window" title="采集过滤" style="width: 700px; height: 600px;padding:5px" >
+        <div style="padding:5px;background:#fff;border:1px solid #ccc;">
+
+                <form method="post" id="searchform">
+                    <table style="width: 100%;border: 1;padding: 0px 0px 0px 0px;text-align: left">
+                        <tr>
+                            <td>商品价格:</td>
+                            <td><input class="easyui-validatebox" type="text" name="name" id="start_price"></input></td>
+                            <td>-<input class="easyui-validatebox" type="text" name="name" id="end_price"></input></td>
+                        </tr>
+                        <tr>
+                            <td>30天推广量:</td>
+                            <td><input class="easyui-validatebox" type="text" name="name" id="start_commissionNum"></input></td>
+                            <td>-<input class="easyui-validatebox" type="text" name="name" id="end_commissionNum"></input></td>
+                        </tr>
+                        <tr>
+                            <td>卖家信用:</td>
+                            <td> <!-- todo :这东西可以动态填充 -->
+                                <select class="easyui-combobox" panelHeight="auto" style="width:100px" id="start_credit">
+                                    <option value="1heart">一心</option>
+                                    <option value="2heart">两心</option>
+                                    <option value="3heart">三心</option>
+                                    <option value="4heart">四心</option>
+                                    <option value="5heart">五心</option>
+                                    <option value="1diamond">一钻</option>
+                                    <option value="2diamond">两钻</option>
+                                    <option value="3diamond">三钻</option>
+                                    <option value="4diamond">四钻</option>
+                                    <option value="5diamond">五钻</option>
+                                    <option value="1crown">一冠</option>
+                                    <option value="2crown">两冠</option>
+                                    <option value="3crown">三冠</option>
+                                    <option value="4crown">四冠</option>
+                                    <option value="5crown">五冠</option>
+                                    <option value="1goldencrown">一黄冠</option>
+                                    <option value="2goldencrown">二黄冠</option>
+                                    <option value="3goldencrown">三黄冠</option>
+                                    <option value="4goldencrown">四黄冠</option>
+                                    <option value="5goldencrown">五黄冠</option>
+                                </select>
+                            </td>
+                            <td>-
+                                <select class="easyui-combobox" panelHeight="auto" style="width:100px" id="end_credit">
+                                    <option value="1heart">一心</option>
+                                    <option value="2heart">两心</option>
+                                    <option value="3heart">三心</option>
+                                    <option value="4heart">四心</option>
+                                    <option value="5heart">五心</option>
+                                    <option value="1diamond">一钻</option>
+                                    <option value="2diamond">两钻</option>
+                                    <option value="3diamond">三钻</option>
+                                    <option value="4diamond">四钻</option>
+                                    <option value="5diamond">五钻</option>
+                                    <option value="1crown">一冠</option>
+                                    <option value="2crown">两冠</option>
+                                    <option value="3crown">三冠</option>
+                                    <option value="4crown">四冠</option>
+                                    <option value="5crown">五冠</option>
+                                    <option value="1goldencrown">一黄冠</option>
+                                    <option value="2goldencrown">二黄冠</option>
+                                    <option value="3goldencrown">三黄冠</option>
+                                    <option value="4goldencrown">四黄冠</option>
+                                    <option value="5goldencrown" selected="true">五黄冠</option>
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>佣金比率:</td>
+                            <td><input class="easyui-validatebox" type="text" name="name" id="start_commissionRate"></input></td>
+                            <td>-<input class="easyui-validatebox" type="text" name="name" id="end_commissionRate"></input></td>
+                        </tr>
+                        <tr>
+                            <td>30天成交量:</td>
+                            <td><input class="easyui-validatebox" type="text" name="name" id="start_totalnum"></input></td>
+                            <td>-<input class="easyui-validatebox" type="text" name="name" id="end_totalnum"></input></td>
+                        </tr>
+                        <tr>
+                            <td><input class="easyui-checkbox" type="checkbox" name="name" id="mall_item"  >是否天猫商品</input></td>
+                            <td><input class="easyui-checkbox" type="checkbox" name="name" id="guarantee"       >是否消保卖家</input></td>
+                            <td><input class="easyui-checkbox" type="checkbox" name="name" id="sevendays_return">是否支持7天退换</input></td>
+
+
+                        </tr>
+                        <tr>
+                            <td><input class="easyui-checkbox" type="checkbox" name="name" id="cash_coupon"     >是否支持抵价券</input> </td>
+                            <td><input class="easyui-checkbox" type="checkbox" name="name" id="real_describe"   >是否先行赔付</input></td>
+                            <td></td>
+                        </tr>
+                    </table>
+
+                </form>
+        </div>
+        <div  style="text-align: right; padding: 5px;vertical-align:bottom">
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="SearchOK()" id="btn-search" icon="icon-ok">搜索</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearform()" id="btn-clear" icon="icon-ok">清空条件</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="closeSearchWindow()" id="btn-search-cancel" icon="icon-cancel">    取消</a>
+        </div>
     </div>
 </div>
 
 </body>
 </html>
+
 

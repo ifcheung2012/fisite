@@ -75,8 +75,10 @@ def tbkitemlist(request):
     #html = tbk.getitemslist(cid)
     return render_to_response('tbkitemlist.html')
 
+
 def adminmainboard(request):
     return render_to_response('adminindex.html')
+
 
 def tbkitemlistres(request):
     url = "gw.api.taobao.com"
@@ -86,7 +88,24 @@ def tbkitemlistres(request):
     tbk = MyTop(url, port, appkey, secret)
     #cid = 50020808
     cid = 50004889
-    html = tbk.getitemslist(cid)
+    para = {}
+    para["start_commissionRate"] = request.POST['start_commissionRate']
+    para["end_commissionNum"] = request.POST['end_commissionRate']
+    para["start_commissionNum"] = request.POST['start_commissionNum']
+    para["end_commissionNum"] = request.POST['end_commissionNum']
+    para["start_totalnum"] = request.POST['start_totalnum']
+    para["end_totalnum"] = request.POST['end_totalnum']
+    para["start_credit"] = request.POST['start_credit']
+    para["end_credit"] = request.POST['end_credit']
+    para["start_price"] = request.POST['start_price']
+    para["end_price"] = int(request.POST['end_price'])
+    para["mall_item"] = int(request.POST['mall_item'])
+    para["guarantee"] = int(request.POST['guarantee'])
+    para["sevendays_return"] = int(request.POST['sevendays_return'])
+    para["real_describe"] = int(request.POST['real_describe'])
+    para["cash_coupon"] = int(request.POST['cash_coupon'])
+
+    html = tbk.getitemslist(cid, para)
     return HttpResponse(html)
 
 

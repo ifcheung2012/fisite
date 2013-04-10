@@ -2,6 +2,7 @@ import urllib2
 import top.api
 import json
 import datetime
+import string
 
 
 def getstring():
@@ -26,35 +27,45 @@ class MyTop:
     cid means itmes' categoryid
     '''
 
-    def getitemslist(self, cid):
-
+    def getitemslist(self, cid,para):
         req = top.api.TaobaokeItemsGetRequest(self.url, self.port)
         req.set_app_info(top.appinfo(self.appkey, self.secret))
         req.page_no = 2
         req.page_size = 25
         req.cid = cid
         req.fields = "num_iid,title,nick,pic_url,price,click_url,shop_click_url,item_location,seller_credit_score,commission,commission_rate,commission_num,commission_volume,volume,promotion_price"
+        '''
+        todo :para
+        '''
+        import sys
+        endMax = sys.maxint
+        req.start_commissionRate= para["start_commissionRate"]  if  para["start_commissionRate"] else 0
+        req.end_commissionRate  = para["end_commissionNum"]     if  para["end_commissionNum"]    else endMax
+        req.start_commissionNum = para["start_commissionNum"]   if  para["start_commissionNum"]  else 0
+        req.end_commissionNum   = para["end_commissionNum"]     if  para["end_commissionNum"]    else endMax
+        req.start_totalnum      = para["start_totalnum"]        if  para["start_totalnum"]       else 0
+        req.end_totalnum        = para["end_totalnum"]          if  para["end_totalnum"]         else endMax
+        req.start_credit        = para["start_credit"]          if  para["start_credit"]         else '1heart'
+        req.end_credit          = para["end_credit"]            if  para["end_credit"]           else '5goldencrown'
+        req.start_price         = para["start_price"]           if  para["start_price"]          else 0
+        req.end_price           = para["end_price"]             if  para["end_price"]            else endMax
+        req.mall_item           = True                          if  para["mall_item"]            else False
+        req.guarantee           = True                          if  para["guarantee"]            else False
+        req.sevendays_return    = True                          if  para["sevendays_return"]     else False
+        req.real_describe       = True                          if  para["real_describe"]        else False
+        req.cash_coupon         = True                          if  para["cash_coupon"]          else False   #todo : when true ,http error 500,y?
+
+
+
         resp = req.getResponse()
+
         resp["taobaoke_items_get_response"]["taobaoke_items"]["total"] = 5
         respjson = resp["taobaoke_items_get_response"]["taobaoke_items"]
-        resplist = resp["taobaoke_items_get_response"][
-            "taobaoke_items"]["taobaoke_item"]
-        linkurl = [v["click_url"] + v["price"] + v["title"] for v in resplist]
-        # linkurl.append(respkey[0]["click_url"])
         res = json.dumps(respjson, indent=4, ensure_ascii=False)
-        import string
-
-        res = string.replace(res, "taobaoke_item", "rows", 1)
-        redata = res
+        redata = string.replace(res, "taobaoke_item", "rows", 1)
 
         return redata
-        # return resp["taobaoke_items"]
-        # print 'DATA:', repr(resp)
-        # print 'repr(data)          :', len(repr(resp))
-        # print 'dumps(data)         :', len(json.dumps(resp))
-        # print 'dumps(data,indent=2) :', len(json.dumps(resp, indent=4))
-        # print 'dumps(resp,separators):', len(json.dumps(resp, separators=(',',
-        # ':')))
+
 
     def getitemdetail(self, num_iids):
         req = top.api.TaobaokeItemsDetailGetRequest(url, port)
@@ -112,8 +123,6 @@ class MyTop:
             print(res)
         except Exception, e:
             print(e)
-
-
 
 
 if __name__ == "__main__":
