@@ -1,0 +1,24 @@
+[ {"id":"default price_desc","desc":"价格从高到低    ",  "text":"default price_desc"
+},{"id":"price_asc","desc":"价格从低到高    ",  "text":"price_asc"
+},{"id":"credit_desc","desc":"信用等级从高到低  ", "text":"credit_desc","selected":true
+},{"id":"commissionRate_desc","desc":"佣金比率从高到低  ", "text":"commissionRate_desc"
+},{"id":"commissionRate_asc","desc":"佣金比率从低到高  ", "text":"commissionRate_asc"
+},{"id":"commissionNum_desc","desc":"成交量成高到低   ",  "text":"commissionNum_desc"
+},{"id":"commissionNum_asc","desc":"成交量从低到高   ",  "text":"commissionNum_asc"
+},{"id":"commissionVolume_desc","desc":"总支出佣金从高到低 ", "text":"commissionVolume_desc"
+},{"id":"commissionVolume_asc","desc":"总支出佣金从低到高 ", "text":"commissionVolume_asc"
+},{"id":"delistTime_desc","desc":"商品下架时间从高到低","text":"delistTime_desc"
+},{"id":"delistTime_asc","desc":"商品下架时间从低到高","text":"delistTime_asc"
+}]
+
+
+
+
+
+
+
+
+
+
+
+

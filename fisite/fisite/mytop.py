@@ -54,7 +54,7 @@ class MyTop:
         req.sevendays_return    = True                          if  para["sevendays_return"]     else False
         req.real_describe       = True                          if  para["real_describe"]        else False
         req.cash_coupon         = True                          if  para["cash_coupon"]          else False   #todo : when true ,http error 500,y?
-
+        req.sort                = para["sort"]                  if  para["sort"]                 else None
 
 
         resp = req.getResponse()

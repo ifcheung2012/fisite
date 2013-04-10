@@ -13,8 +13,10 @@
 <body>
 
 <div region="center" style="width: 1300px; height: 700px; padding: 1px;overflow-y: hidden">
-    <div id="tbklistgrid" >
-    </div>
+
+        <div id="tbklistgrid" >
+        </div>
+
 </div>
 <div style="margin:10px 0;"></div>
 
@@ -24,6 +26,7 @@
 
                 <form method="post" id="searchform">
                     <table style="width: 100%;border: 1;padding: 0px 0px 0px 0px;text-align: left">
+
                         <tr>
                             <td>商品价格:</td>
                             <td><input class="easyui-validatebox" type="text" name="name" id="start_price"></input></td>
@@ -106,6 +109,11 @@
                         <tr>
                             <td><input class="easyui-checkbox" type="checkbox" name="name" id="cash_coupon"     >是否支持抵价券</input> </td>
                             <td><input class="easyui-checkbox" type="checkbox" name="name" id="real_describe"   >是否先行赔付</input></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>排序:</td>
+                            <td><input class="easyui-combobox" name="language" id="sortcomb" ></td>
                             <td></td>
                         </tr>
                     </table>

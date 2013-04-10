@@ -5,6 +5,7 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 import datetime
 from fisite.forms import ContactForm
 from fisite.mytop import MyTop
+from fisite.topitems.models import TbkTpItem,TbkTpItemCat
 
 
 def contact(request):
@@ -98,6 +99,7 @@ def tbkitemlistres(request):
     para["start_credit"] = request.POST['start_credit']
     para["end_credit"] = request.POST['end_credit']
     para["start_price"] = request.POST['start_price']
+    para["sort"] = request.POST['sortby']
     para["end_price"] = int(request.POST['end_price'])
     para["mall_item"] = int(request.POST['mall_item'])
     para["guarantee"] = int(request.POST['guarantee'])
@@ -108,8 +110,20 @@ def tbkitemlistres(request):
     html = tbk.getitemslist(cid, para)
     return HttpResponse(html)
 
+'num_iid,title,nick,pic_url,price,click_url,shop_click_url,item_location,' \
+'seller_credit_score,commission,commission_rate,commission_num,commission_volume,volume,promotion_price'
+def tbkitempublish(request):
+    #tbkitem = TbkTpItem()
+    #tbkitem.addtime = datetime.datetime.now()
+    #tbkitem.clickurl =  request.GET['click_url']
+    #tbkitem.imgurl  =   request.GET['pic_url']
+    #tbkitem.key_id  =   request.GET['num_iid']
+    #tbkitem.title   =   request.GET['title']
+    #tbkitem.price   =   request.GET['price']
+    #tbkitem.save()
+    result = request.GET['res']
+    return HttpResponse("success:"+result)
 
-def formattbkjson(resp, total):
-    items = resp["taobaoke_item"]
-    result = ""
-    itemlist = [item["click_url"]]
+
+
+

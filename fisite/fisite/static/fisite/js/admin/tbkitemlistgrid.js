@@ -12,15 +12,14 @@ function qq(value,name){
 var searchWin;
 var searchForm;
 var grid;
-
+var sortCombobox;
 $(function () {
     grid = $('#tbklistgrid').datagrid({
         title: '淘宝数据管理',
         iconCls: 'icon-save',
         methord: 'post',
-
-        sortName: 'nick',
-        sortOrder: 'desc',
+        //sortName: 'nick',
+        //sortOrder: 'desc',
         idField: 'num_iid',
         pageSize: 20,
         toolbar:toolbar,
@@ -37,21 +36,21 @@ $(function () {
             }},
             { field: 'item_location', title: '地点', width: 70, sortable: true, rowspan: 2 },
             { title: '商品详细信息', colspan: 12 }
-        ],[{ field: 'title', title: '商品名称', width: 300, sortable: true, formatter: function (value, row, index) {
+        ],[{ field: 'title', title: '商品名称', width: 300, formatter: function (value, row, index) {
                 return "<a href='" + row.click_url + "' width='300px' >"+ row.title +"</a>";
             }},
             { field: 'pic_url', title: '产品图片', width: 100,  align: 'center', formatter: function (value, row, index) {
 
                 return "<img src='" + row.pic_url + "' alt='" + row.title + "' width='100px',higth='80px' />";
             }},
-            { field: 'num_iid', title: '产品编号', width: 90, sortable: true},
-            { field: 'price', title: '商品价格', width: 50, sortable: true},
-            { field: 'promotion_price', title: '促销折让', width: 50, sortable: true},
-            { field: 'commission', title: '佣金', width: 50, sortable: true},
-            { field: 'commission_num', title: '累计成交量', width: 70, sortable: true},
-            { field: 'commission_volume', title: '累计总支出佣金量', width: 70, sortable: true},
-            { field: 'volume', title: '30天内交易量', width: 70, sortable: true},
-            { field: 'commission_rate', title: '佣金比率', width: 70, sortable: true, formatter: function (value, row, index) {
+            { field: 'num_iid', title: '产品编号', width: 90},
+            { field: 'price', title: '商品价格', width: 50},
+            { field: 'promotion_price', title: '促销折让', width: 50},
+            { field: 'commission', title: '佣金', width: 50},
+            { field: 'commission_num', title: '累计成交量', width: 70},
+            { field: 'commission_volume', title: '累计总支出佣金量', width: 70},
+            { field: 'volume', title: '30天内交易量', width: 70},
+            { field: 'commission_rate', title: '佣金比率', width: 70, formatter: function (value, row, index) {
                 return (row.commission_rate / 100) + '%'  //todo better to format it in jsondata
             }},
             { field: 'status', title: '状态', width: 50,  formatter: function (value, row, index) {
@@ -83,7 +82,14 @@ $(function () {
         modal: true
     });
     searchForm = searchWin.find('searchform');
-
+    sortCombobox = $('#sortcomb').combobox({
+        url: '/static/fisite/js/admin/combobox_data1.json',
+        valueField: 'id',
+        textField: 'text',
+        panelWidth: 350,
+        panelHeight: 'auto',
+        formatter: formatItem
+    });
     $('body').layout();
 })
 
@@ -92,6 +98,11 @@ function OpensearchWin() {
     searchForm.form('clear');
 }
 
+function formatItem(row){
+    var s = '<span style="font-weight:bold">' + row.text + '</span><br/>' +
+        '<span style="color:#888">' + row.desc + '</span>';
+    return s;
+}
 
 function onLoadSuccess(data){
     var merges = [{
@@ -147,66 +158,83 @@ function pagerFilter(data){
     return data;
 }
 
-var toolbar = [{
-    text: '数据采集',
-    iconCls: 'icon-search',
-    handler: OpensearchWin
-    }, '-',{
-    text:'入商品库',
-    iconCls:'icon-add',
-    handler:function(){alert('add')}
-    }];
+var toolbar;
+toolbar = [
+    {
+        text: '数据采集',
+        iconCls: 'icon-search',
+        handler: OpensearchWin
+    },
+    '-',
+    {
+        text: '入商品库',
+        iconCls: 'icon-add',
+        handler: function () {
+            var res = getSelections();
+            $.ajax({
+                type: "get",
+                url: "http://127.0.0.1:8000/tbkitempublish",
+                data: "res="+res,
+                success: function(msg){alert( msg ); } //操作成功后的操作！msg是后台传过来的值
+            });
+        }
+    }
+];
 
+function getSelections(){
+    var ss = [];
+    var rows = $('#tbklistgrid').datagrid('getSelections');
+    ss.push('[');
+    rcount=rows.length-1;
+    for(var i=0; i<rows.length; i++){
+        var row = rows[i];
+        if(i==rcount){
+            ss.push('{"click_url":"'+row.click_url+'","pic_url":"'+row.pic_url+'","num_iid":"'+row.num_iid+'","title":"'+row.title+'","price":"'+row.price+'"}]');
+        }else{
+            ss.push('{"click_url":"'+row.click_url+'","pic_url":"'+row.pic_url+'","num_iid":"'+row.num_iid+'","title":"'+row.title+'","price":"'+row.price+'"}');
+        }
+
+    }
+    return ss
+    //$.messager.alert('Info', ss);
+}
 
 function showAll(){
     grid.datagrid({
         url: 'http://127.0.0.1:8000/tbkitemlistres/'
     })
 }
-function SearchOK() {
-    var start_commissionRate = $("#start_commissionRate").val();
-    var end_commissionRate = $("#end_commissionRate").val();
-    var start_commissionNum = $("#start_commissionNum").val();
-    var end_commissionNum = $("#end_commissionNum").val();
-    var start_totalnum = $("#start_totalnum").val();
-    var end_totalnum = $("#end_totalnum").val();
-    var start_credit = $("#start_credit").combobox("getValue");
-    var end_credit = $('#end_credit').combobox('getValue');
-    var start_price = $("#start_price").val();
-    var end_price = $("#end_price").val();
-    var mall_item         =   ($("#mall_item").attr("checked")=="checked")?1:0 ;
-    var guarantee         =   ($("#guarantee").attr("checked")=="checked")?1:0 ;
-    var sevendays_return  =   ($("#sevendays_return").attr("checked")=="checked")?1:0  ;
-    var real_describe     =   ($("#real_describe").attr("checked")=="checked")?1:0   ;
-    var cash_coupon       =   ($("#cash_coupon").attr("checked")=="checked")?1:0     ;
 
+function SearchOK() {
 
     searchWin.window('close');
     grid.datagrid({ url: 'http://127.0.0.1:8000/tbkitemlistres/' ,
         queryParams: {
-            start_commissionRate: start_commissionRate,
-            end_commissionRate  : end_commissionNum,
-            start_commissionNum : start_commissionNum,
-            end_commissionNum   : end_commissionNum,
-            start_totalnum      : start_totalnum,
-            end_totalnum        : end_totalnum,
-            start_credit        : start_credit,
-            end_credit          : end_credit,
-            start_price         : start_price,
-            end_price           : end_price,
-            mall_item           : mall_item,
-            guarantee           : guarantee,
-            sevendays_return    : sevendays_return,
-            real_describe       : real_describe,
-            cash_coupon         : cash_coupon
+            start_commissionRate: $("#start_commissionRate").val(),                         
+            end_commissionRate  : $("#end_commissionRate").val(),                           
+            start_commissionNum : $("#start_commissionNum").val(),                          
+            end_commissionNum   : $("#end_commissionNum").val(),                            
+            start_totalnum      : $("#start_totalnum").val(),                               
+            end_totalnum        : $("#end_totalnum").val(),                                 
+            start_credit        : $("#start_credit").combobox("getValue"),                  
+            end_credit          : $('#end_credit').combobox('getValue'),                    
+            start_price         : $("#start_price").val(),                                  
+            end_price           : $("#end_price").val(),                                    
+            mall_item           : ($("#mall_item").attr("checked")=="checked")?1:0 ,        
+            guarantee           : ($("#guarantee").attr("checked")=="checked")?1:0 ,        
+            sevendays_return    : ($("#sevendays_return").attr("checked")=="checked")?1:0  ,
+            real_describe       : ($("#real_describe").attr("checked")=="checked")?1:0   ,  
+            cash_coupon         : ($("#cash_coupon").attr("checked")=="checked")?1:0     ,  
+            sortby              : $("#sortcomb").combobox("getValue")
 
         }
     });
 }
+
 function closeSearchWindow() {
     searchWin.window('close');
 }
 function clearform(){
-    alert(($("#mall_item").attr("checked")=="checked")?1:0) ;
+    alert($("#sortcomb").combobox("getValue") ) ;
     searchForm.form('clear');
 }
