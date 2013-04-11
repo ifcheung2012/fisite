@@ -121,8 +121,8 @@ def tbkitempublish(request):
     #tbkitem.title   =   request.GET['title']
     #tbkitem.price   =   request.GET['price']
     #tbkitem.save()
-    result = request.GET['res']
-    return HttpResponse("success:"+result)
+    result = request.POST['res']
+    return HttpResponse(result)
 
 
 

@@ -172,9 +172,9 @@ toolbar = [
         handler: function () {
             var res = getSelections();
             $.ajax({
-                type: "get",
+                type: "post",
                 url: "http://127.0.0.1:8000/tbkitempublish",
-                data: "res="+res,
+                data: res,
                 success: function(msg){alert( msg ); } //操作成功后的操作！msg是后台传过来的值
             });
         }
@@ -182,13 +182,18 @@ toolbar = [
 ];
 
 function getSelections(){
-    var ss = [];
+    var ss = "";
     var rows = $('#tbklistgrid').datagrid('getSelections');
-    ss.push('[');
+
     rcount=rows.length-1;
+
     for(var i=0; i<rows.length; i++){
         var row = rows[i];
-        if(i==rcount){
+
+        if(i==0){
+            ss.push('{"click_url":"'+row.click_url+'","pic_url":"'+row.pic_url+'","num_iid":"'+row.num_iid+'","title":"'+row.title+'","price":"'+row.price+'"},');
+        }
+        else if(i==rcount){
             ss.push('{"click_url":"'+row.click_url+'","pic_url":"'+row.pic_url+'","num_iid":"'+row.num_iid+'","title":"'+row.title+'","price":"'+row.price+'"}]');
         }else{
             ss.push('{"click_url":"'+row.click_url+'","pic_url":"'+row.pic_url+'","num_iid":"'+row.num_iid+'","title":"'+row.title+'","price":"'+row.price+'"}');
