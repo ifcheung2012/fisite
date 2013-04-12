@@ -27,7 +27,7 @@ class MyTop:
     cid means itmes' categoryid
     '''
 
-    def getitemslist(self, cid,para):
+    def getitemslist(self, cid, para):
         req = top.api.TaobaokeItemsGetRequest(self.url, self.port)
         req.set_app_info(top.appinfo(self.appkey, self.secret))
         req.page_no = 2
@@ -38,24 +38,24 @@ class MyTop:
         todo :para
         '''
         import sys
-        endMax = sys.maxint
-        req.start_commissionRate= para["start_commissionRate"]  if  para["start_commissionRate"] else 0
-        req.end_commissionRate  = para["end_commissionNum"]     if  para["end_commissionNum"]    else endMax
-        req.start_commissionNum = para["start_commissionNum"]   if  para["start_commissionNum"]  else 0
-        req.end_commissionNum   = para["end_commissionNum"]     if  para["end_commissionNum"]    else endMax
-        req.start_totalnum      = para["start_totalnum"]        if  para["start_totalnum"]       else 0
-        req.end_totalnum        = para["end_totalnum"]          if  para["end_totalnum"]         else endMax
-        req.start_credit        = para["start_credit"]          if  para["start_credit"]         else '1heart'
-        req.end_credit          = para["end_credit"]            if  para["end_credit"]           else '5goldencrown'
-        req.start_price         = para["start_price"]           if  para["start_price"]          else 0
-        req.end_price           = para["end_price"]             if  para["end_price"]            else endMax
-        req.mall_item           = True                          if  para["mall_item"]            else False
-        req.guarantee           = True                          if  para["guarantee"]            else False
-        req.sevendays_return    = True                          if  para["sevendays_return"]     else False
-        req.real_describe       = True                          if  para["real_describe"]        else False
-        req.cash_coupon         = True                          if  para["cash_coupon"]          else False   #todo : when true ,http error 500,y?
-        req.sort                = para["sort"]                  if  para["sort"]                 else None
 
+        endMax = sys.maxint
+        req.start_commissionRate = para["start_commissionRate"] if para["start_commissionRate"] else 0
+        req.end_commissionRate = para["end_commissionNum"] if para["end_commissionNum"]    else endMax
+        req.start_commissionNum = para["start_commissionNum"] if para["start_commissionNum"]  else 0
+        req.end_commissionNum = para["end_commissionNum"] if para["end_commissionNum"]    else endMax
+        req.start_totalnum = para["start_totalnum"] if para["start_totalnum"]       else 0
+        req.end_totalnum = para["end_totalnum"] if para["end_totalnum"]         else endMax
+        req.start_credit = para["start_credit"] if para["start_credit"]         else '1heart'
+        req.end_credit = para["end_credit"] if para["end_credit"]           else '5goldencrown'
+        req.start_price = para["start_price"] if para["start_price"]          else 0
+        req.end_price = para["end_price"] if para["end_price"]            else endMax
+        req.mall_item = True if para["mall_item"]            else False
+        req.guarantee = True if para["guarantee"]            else False
+        req.sevendays_return = True if para["sevendays_return"]     else False
+        req.real_describe = True if para["real_describe"]        else False
+        req.cash_coupon = True if para["cash_coupon"]          else False   #todo : when true ,http error 500,y?
+        req.sort = para["sort"] if para["sort"]                 else None
 
         resp = req.getResponse()
 
@@ -68,7 +68,7 @@ class MyTop:
 
 
     def getitemdetail(self, num_iids):
-        req = top.api.TaobaokeItemsDetailGetRequest(url, port)
+        req = top.api.TaobaokeItemsDetailGetRequest(self.url, self.port)
 
         req.set_app_info(top.appinfo(appkey, secret))
         req.fields = "skus,type,seller_cid,location,prop_imgs,videos,has_discount,post_fee,ems_fee,list_time,item_imgs,click_url,shop_click_url,valid_thru,seller_credit_score,num_iid,title,nick"
@@ -82,20 +82,19 @@ class MyTop:
             print(e)
 
     def getitemcats(self, parent_cid):
-        req = top.api.ItemcatsGetRequest(url, port)
+        req = top.api.ItemcatsGetRequest(self.url, self.port)
 
-        req.set_app_info(top.appinfo(appkey, secret))
+        req.set_app_info(top.appinfo(self.appkey, self.secret))
         req.fields = "cid,parent_cid,name,is_parent"
         req.parent_cid = parent_cid
         # req.cids = cids
         # req.start_credit = "1heart"
-        try:
-            resp = req.getResponse()
-            res = json.dumps(
-                resp, sort_keys=True, indent=4, ensure_ascii=False)
-            print(res)
-        except Exception, e:
-            print(e)
+
+        resp = req.getResponse()
+        respjson = resp["itemcats_get_response"]["item_cats"]["item_cat"]
+        res = json.dumps(respjson, sort_keys=True, indent=4, ensure_ascii=False)
+        return res
+
 
     def getdayreport(self, dt):
         req = top.api.TaobaokeReportGetRequest(url, port)

@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from .views import hello, current_datetime, hours_ahead, search_form, search, tbkitemlist, contact, tbkitemlistres,tbkitemcats, adminmainboard,tbkitempublish
+from .views import hello, current_datetime, hours_ahead, search_form, search,managelistres, tbkitemlist, contact, managelistgrid, tbkitemlistres,tbkitemcats, adminmainboard,tbkitempublish
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 from os import path
@@ -15,6 +15,8 @@ urlpatterns = patterns('',
                        ('^tbkitemlistres/$', tbkitemlistres),
                        ('^adminmainboard/$', adminmainboard),
                        ('^tbkitempublish/$', tbkitempublish),
+                       ('^managelistgrid/$', managelistgrid),
+                        ('^managelistres/$',managelistres),
                        ('^tbkitemcats/$', tbkitemcats),
                        ('^contact/$', contact),
                        ('^time/$', current_datetime),

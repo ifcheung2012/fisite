@@ -6,6 +6,7 @@ from django.db import models
 class TbkTpItemManager(models.Manager):
     def ItemCount(self,keyword):
         return self.filter(title__icontains=keyword).count()
+
 class TbkTpItemCat(models.Model):
     name   = models.CharField(max_length=50)
     tags   = models.CharField(max_length=50)

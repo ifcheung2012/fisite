@@ -6,7 +6,8 @@ import datetime
 from fisite.forms import ContactForm
 from fisite.mytop import MyTop
 from fisite.topitems.models import TbkTpItem, TbkTpItemCat
-
+from django.core import serializers
+import json
 
 def contact(request):
     if request.method == 'POST':
@@ -67,18 +68,11 @@ def hours_ahead(request, offset):
 
 
 def tbkitemlist(request):
-    #url = "gw.api.taobao.com"
-    #port = 80
-    #appkey = "21430097"
-    #secret = "b905348541f429bcb9215cf804f7df72"
-    #tbk = MyTop(url, port, appkey, secret)
-    #cid = 50020808
-    #html = tbk.getitemslist(cid)
-    return render_to_response('tbkitemlist.html')
+    return render_to_response('admin/tbkitemlist.html')
 
 
 def adminmainboard(request):
-    return render_to_response('adminindex.html')
+    return render_to_response('admin/adminindex.html')
 
 
 def tbkitemcats(request):
@@ -87,8 +81,8 @@ def tbkitemcats(request):
     appkey = "21430097"
     secret = "b905348541f429bcb9215cf804f7df72"
     mytbk = MyTop(url, port, appkey, secret)
-    cid = '0'
-    return mytbk.getitemcats(cid)
+    cid = int(request.GET["cid"])
+    return HttpResponse(mytbk.getitemcats(cid))
 
 
 def tbkitemlistres(request):
@@ -97,8 +91,7 @@ def tbkitemlistres(request):
     appkey = "21430097"
     secret = "b905348541f429bcb9215cf804f7df72"
     tbk = MyTop(url, port, appkey, secret)
-    #cid = 50020808
-    cid = 50004889
+    cid = int(request.POST['itemcat'])
     para = {}
     para["start_commissionRate"] = request.POST['start_commissionRate']
     para["end_commissionNum"] = request.POST['end_commissionRate']
@@ -126,40 +119,47 @@ def tbkitemlistres(request):
 
 
 def tbkitempublish(request):
-    #tbkitem = TbkTpItem()
-    #tbkitem.addtime = datetime.datetime.now()
-    #tbkitem.clickurl =  request.GET['click_url']
-    #tbkitem.imgurl  =   request.GET['pic_url']
-    #tbkitem.key_id  =   request.GET['num_iid']
-    #tbkitem.title   =   request.GET['title']
-    #tbkitem.price   =   request.GET['price']
-    #tbkitem.save()
     response = HttpResponse()
-    #response['Content-Type'] = "text/javascript"
-    import json
-
     res = request.POST['topublish']
-    resdata = json.loads(res)
+    resdata = json.loads(res,ensure_ascii=False)
+
+    repeatdata = []
     leng = len(resdata)
     for i in range(leng):
-        tpkitem = TbkTpItem()
-        tpkitem.addtime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        tpkitem.clickurl = resdata[i]['click_url']
-        tpkitem.imgurl = resdata[i]['pic_url']
-        tpkitem.intro = resdata[i]['title']
-        tpkitem.price = resdata[i]['price']
-        tpkitem.key_id = resdata[i]['num_iid']
-        tpkitem.title = resdata[i]['title']
-        tpkitem.cmsrates = resdata[i]['commission_rate']
-        tpkitem.status = 1
-        try:
-            tpkitem.save()
-        except Exception:
-            pass
+        numid = resdata[i]['num_iid']
 
-    #jsres   = json.loads(res)
-    response.write("ok")
+        if  TbkTpItem.objects.filter(key_id=numid):
+            repeatdata.append(numid)
+        else:
+            tpkitem = TbkTpItem()
+            tpkitem.addtime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            tpkitem.clickurl = resdata[i]['click_url']
+            tpkitem.imgurl = resdata[i]['pic_url']
+            tpkitem.intro = resdata[i]['nick']
+            tpkitem.price = resdata[i]['price']
+            tpkitem.key_id = numid
+            tpkitem.title = resdata[i]['title']
+            tpkitem.cmsrates = resdata[i]['commission_rate']
+            tpkitem.status = 1
+            try:
+                tpkitem.save()
+            except Exception:
+                pass
+
+
+    repeatstr = " [Already existed numid:" + str(repeatdata) + "]" if len(repeatdata)>0 else ""
+    response.write("ok" + repeatstr)
     return response
+
+def managelistgrid(request):
+
+    return render_to_response('admin/itemmanage.html')
+
+def managelistres(request):
+    itemlist = serializers.serialize("json",TbkTpItem.objects.all())
+
+    resp =  json.dumps(itemlist[0], sort_keys=True, indent=4, ensure_ascii=False)
+    return HttpResponse(resp)
 
 
 

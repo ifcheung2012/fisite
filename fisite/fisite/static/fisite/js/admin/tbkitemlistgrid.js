@@ -13,7 +13,10 @@ var searchWin;
 var searchForm;
 var grid;
 var sortCombobox;
-var itemcat;
+var itemcat1;
+var itemcat2;
+var itemcat3;
+var cid,precid;
 $(function () {
     grid = $('#tbklistgrid').datagrid({
         title: '淘宝数据管理',
@@ -28,7 +31,7 @@ $(function () {
         nowrap:false,
         striped: true,
         frozenColumns: [[
-            { field: 'ck', checkbox: true, rowspan: 2 }
+            { field: 'ck', checkbox: true}
 
         ]],
         columns: [[
@@ -84,21 +87,52 @@ $(function () {
     });
     searchForm = searchWin.find('searchform');
     sortCombobox = $('#sortcomb').combobox({
-        url: '/tbkitemcats/',
+        url: '../static/fisite/js/admin/combobox_data1.json',
         valueField: 'id',
         textField: 'text',
         panelWidth: 350,
         panelHeight: 'auto',
         formatter: formatItem
     });
-    itemcat = $('#sortcomb').combobox({
-        url: '/static/fisite/js/admin/combobox_data1.json', //todo modify this url
-        valueField: 'id',
-        textField: 'text',
-        panelWidth: 350,
-        panelHeight: 'auto',
-        formatter: formatItem
+    itemcat1 = $('#itemcat1').combobox({
+        url: '/tbkitemcats/?cid=0',
+        valueField: 'cid',
+        panelWidth: 'auto',
+        textField: 'name',
+        onSelect:function(record){
+            var ul='/tbkitemcats/?cid='+$('#itemcat1').combobox('getValue');
+            $('#itemcat2').combobox('reload',ul);
+            precid = $('#itemcat1').combobox('getValue');
+            catid = $('#itemcat2').combobox('getValue');
+            cid = (catid==null||catid=="")?precid:catid;
+            $('#itemcat2').combobox({visible:true});
+        }
     });
+    itemcat2 = $('#itemcat2').combobox({
+        valueField: 'cid',
+        panelWidth: 'auto',
+        textField: 'name',
+        visibility:"visible",
+        onSelect:function(record){
+            var ul='/tbkitemcats/?cid='+$('#itemcat2').combobox('getValue');
+            $('#itemcat3').combobox('reload',ul);
+            precid = $('#itemcat2').combobox('getValue');
+            catid = $('#itemcat3').combobox('getValue');
+            cid = (catid==null||catid=="")?precid:catid;
+        }
+
+    });
+    itemcat3 = $('#itemcat3').combobox({
+        valueField: 'cid',
+        panelWidth: 'auto',
+        textField: 'name',
+        onSelect:function(record){
+            precid = $('#itemcat2').combobox('getValue');
+            catid = $('#itemcat3').combobox('getValue');
+            cid = (catid==null||catid=="")?precid:catid;
+        }
+    });
+
     $('body').layout();
 })
 
@@ -193,7 +227,7 @@ toolbar = [
             var dt = {'topublish':'yes2pub'};
             $.ajax({
                 type: 'POST',
-                url: "http://127.0.0.1:8000/tbkitempublish/",
+                url: "/tbkitempublish/",
                 data: pubRow,
                 success: function(msg) { alert("second success"+msg); },
                 error: function(status) { alert("post error" + status); }
@@ -228,14 +262,14 @@ function getSelections(){
 
 function showAll(){
     grid.datagrid({
-        url: 'http://127.0.0.1:8000/tbkitemlistres/'
+        url: '/tbkitemlistres/'
     })
 }
 
 function SearchOK() {
 
     searchWin.window('close');
-    grid.datagrid({ url: 'http://127.0.0.1:8000/tbkitemlistres/' ,
+    grid.datagrid({ url: '/tbkitemlistres/' ,
         queryParams: {
             start_commissionRate: $("#start_commissionRate").val(),                         
             end_commissionRate  : $("#end_commissionRate").val(),                           
@@ -252,7 +286,8 @@ function SearchOK() {
             sevendays_return    : ($("#sevendays_return").attr("checked")=="checked")?1:0  ,
             real_describe       : ($("#real_describe").attr("checked")=="checked")?1:0   ,  
             cash_coupon         : ($("#cash_coupon").attr("checked")=="checked")?1:0     ,  
-            sortby              : $("#sortcomb").combobox("getValue")
+            sortby              : $("#sortcomb").combobox("getValue")   ,
+            itemcat             : cid
 
         }
     });
