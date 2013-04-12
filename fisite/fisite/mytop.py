@@ -154,11 +154,11 @@ if __name__ == "__main__":
     # print '---------------------'
     # mytop.getdayreport(dt)
     # print '---------------------'
-    mytop.getitemdetail(num_iids)
+    #mytop.getitemdetail(num_iids)
     print '---------------------'
     # mytop.getitemslist(cid)
     print '---------------------'
-    #mytop.getitemcats(parent_cid)
+    mytop.getitemcats(parent_cid)
     #parent_cid = 1801
     #mytop.getitemcats(parent_cid)
     # getstring()

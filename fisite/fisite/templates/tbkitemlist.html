@@ -9,6 +9,7 @@
     <script type="text/javascript" src="../static/jquery-easyui-1.3.2/jquery-1.8.0.min.js"></script>
     <script type="text/javascript" src="../static/jquery-easyui-1.3.2/jquery.easyui.min.js"></script>
     <script type="text/javascript" src="../static/fisite/js/admin/tbkitemlistgrid.js" ></script>
+    <script type="text/javascript" src="../static/fisite/js/admin/csrf.js" ></script>
 </head>
 <body>
 
@@ -18,13 +19,14 @@
         </div>
 
 </div>
+
 <div style="margin:10px 0;"></div>
 
 <div id="tb" style="padding:5px;height:auto">
     <div id="search-window" title="采集过滤" style="width: 700px; height: 600px;padding:5px" >
         <div style="padding:5px;background:#fff;border:1px solid #ccc;">
 
-                <form method="post" id="searchform">
+                <form method="post" id="searchform">{% csrf_token %}
                     <table style="width: 100%;border: 1;padding: 0px 0px 0px 0px;text-align: left">
 
                         <tr>
@@ -114,7 +116,7 @@
                         <tr>
                             <td>排序:</td>
                             <td><input class="easyui-combobox" name="language" id="sortcomb" ></td>
-                            <td></td>
+                            <td><input class="easyui-combobox" name="language" id="itemcat" ></td>
                         </tr>
                     </table>
 

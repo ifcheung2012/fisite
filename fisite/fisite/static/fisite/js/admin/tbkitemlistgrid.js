@@ -13,6 +13,7 @@ var searchWin;
 var searchForm;
 var grid;
 var sortCombobox;
+var itemcat;
 $(function () {
     grid = $('#tbklistgrid').datagrid({
         title: '淘宝数据管理',
@@ -83,7 +84,15 @@ $(function () {
     });
     searchForm = searchWin.find('searchform');
     sortCombobox = $('#sortcomb').combobox({
-        url: '/static/fisite/js/admin/combobox_data1.json',
+        url: '/tbkitemcats/',
+        valueField: 'id',
+        textField: 'text',
+        panelWidth: 350,
+        panelHeight: 'auto',
+        formatter: formatItem
+    });
+    itemcat = $('#sortcomb').combobox({
+        url: '/static/fisite/js/admin/combobox_data1.json', //todo modify this url
         valueField: 'id',
         textField: 'text',
         panelWidth: 350,
@@ -170,28 +179,41 @@ toolbar = [
         text: '入商品库',
         iconCls: 'icon-add',
         handler: function () {
-            var res = getSelections();
+            var rows = $('#tbklistgrid').datagrid('getSelections');
+            pubRow = new Object();
+            pubRow["topublish"] = JSON.stringify(rows);
+            /*$.post(
+                "http://127.0.0.1:8000/tbkitempublish",
+                pubRow,
+                function(res){
+                    alert( res );
+            },"text").error(function(){
+                    $.messager.alert("message","error when post!");
+                });//操作成功后的操作！msg是后台传过来的值*/
+            var dt = {'topublish':'yes2pub'};
             $.ajax({
-                type: "post",
-                url: "http://127.0.0.1:8000/tbkitempublish",
-                data: res,
-                success: function(msg){alert( msg ); } //操作成功后的操作！msg是后台传过来的值
+                type: 'POST',
+                url: "http://127.0.0.1:8000/tbkitempublish/",
+                data: pubRow,
+                success: function(msg) { alert("second success"+msg); },
+                error: function(status) { alert("post error" + status); }
             });
         }
+
     }
 ];
 
 function getSelections(){
-    var ss = "";
+    var ss = [];
     var rows = $('#tbklistgrid').datagrid('getSelections');
 
     rcount=rows.length-1;
-
-    for(var i=0; i<rows.length; i++){
+    //alert(JSON.stringify(rows));
+    /*for(var i=0; i<rows.length; i++){
         var row = rows[i];
 
         if(i==0){
-            ss.push('{"click_url":"'+row.click_url+'","pic_url":"'+row.pic_url+'","num_iid":"'+row.num_iid+'","title":"'+row.title+'","price":"'+row.price+'"},');
+            ss.push('[{"click_url":"'+row.click_url+'","pic_url":"'+row.pic_url+'","num_iid":"'+row.num_iid+'","title":"'+row.title+'","price":"'+row.price+'"},');
         }
         else if(i==rcount){
             ss.push('{"click_url":"'+row.click_url+'","pic_url":"'+row.pic_url+'","num_iid":"'+row.num_iid+'","title":"'+row.title+'","price":"'+row.price+'"}]');
@@ -199,7 +221,7 @@ function getSelections(){
             ss.push('{"click_url":"'+row.click_url+'","pic_url":"'+row.pic_url+'","num_iid":"'+row.num_iid+'","title":"'+row.title+'","price":"'+row.price+'"}');
         }
 
-    }
+    }*/
     return ss
     //$.messager.alert('Info', ss);
 }

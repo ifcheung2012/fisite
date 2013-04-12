@@ -10,9 +10,8 @@
 #        s += substr
 # print "4.1 total run time:"
 # print time() - t
-#
-#
-#
+import datetime
+print datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 #
 #
 import sys
