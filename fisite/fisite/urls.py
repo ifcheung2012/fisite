@@ -7,7 +7,7 @@ from os import path
 admin.autodiscover()
 
 urlpatterns = patterns('',
-                       ('^api-auth/$', include('rest_framework.urls', namespace='rest_framework')),
+                       # ('^api-auth/$', include('rest_framework.urls', namespace='rest_framework')),
                        (r'^admin/', include(admin.site.urls)),
                        ('^search-form/$', search_form),
                        ('^search/$', search),
