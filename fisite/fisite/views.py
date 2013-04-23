@@ -9,6 +9,7 @@ from fisite.topitems.models import TbkTpItem, TbkTpItemCat
 from django.core import serializers
 import json
 
+
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -61,7 +62,6 @@ def hours_ahead(request, offset):
     except ValueError:
         raise Http404()
     dt = datetime.datetime.now() + datetime.timedelta(hours=offset)
-
     # assert True
     html = "<html><body>In %s hour(s),it will be %s.</body></html>" % (
         offset, dt)
@@ -104,12 +104,12 @@ def tbkitemlistres(request):
     para["end_credit"] = request.POST['end_credit']
     para["start_price"] = request.POST['start_price']
     para["sort"] = request.POST['sortby']
-    para["end_price"] = int(request.POST['end_price']) if  request.POST['end_price'] else None
-    para["mall_item"] = int(request.POST['mall_item']) if  request.POST['mall_item'] else None
-    para["guarantee"] = int(request.POST['guarantee']) if  request.POST['guarantee'] else None
-    para["sevendays_return"] = int(request.POST['sevendays_return'])  if request.POST['sevendays_return']  else None
-    para["real_describe"] = int(request.POST['real_describe'])        if request.POST['real_describe']     else None
-    para["cash_coupon"] = int(request.POST['cash_coupon'])            if request.POST['cash_coupon']       else None
+    para["end_price"] = int(request.POST['end_price']) if request.POST['end_price'] else None
+    para["mall_item"] = int(request.POST['mall_item']) if request.POST['mall_item'] else None
+    para["guarantee"] = int(request.POST['guarantee']) if request.POST['guarantee'] else None
+    para["sevendays_return"] = int(request.POST['sevendays_return']) if request.POST['sevendays_return']  else None
+    para["real_describe"] = int(request.POST['real_describe']) if request.POST['real_describe']     else None
+    para["cash_coupon"] = int(request.POST['cash_coupon']) if request.POST['cash_coupon']       else None
 
     html = tbk.getitemslist(cid, para)
     return HttpResponse(html)
@@ -120,18 +120,30 @@ def tbkitemlistres(request):
 
 
 def tbkitempublish(request):
+    repeatdata = []
     response = HttpResponse()
     res = request.POST['topublish']
-    resdata = json.loads(res,ensure_ascii=False)
+    resdata = json.loads(res)
 
-    repeatdata = []
+    cid = request.POST['cid']
+    tpkitemcat = TbkTpItemCat.objects.get(cid=cid)
+    catid = -1
+
+    if not tpkitemcat.cid:
+        repeatdata.append("itemcatid doesn\'t exsit in database!publish failed!")
+        return HttpResponse(repeatdata)
+
+    else:
+        catid =tpkitemcat.cid
+
     leng = len(resdata)
     for i in range(leng):
         numid = resdata[i]['num_iid']
 
-        if  TbkTpItem.objects.filter(key_id=numid):
+        if TbkTpItem.objects.filter(key_id=numid):
             repeatdata.append(numid)
         else:
+
             tpkitem = TbkTpItem()
             tpkitem.addtime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             tpkitem.clickurl = resdata[i]['click_url']
@@ -141,25 +153,25 @@ def tbkitempublish(request):
             tpkitem.key_id = numid
             tpkitem.title = resdata[i]['title']
             tpkitem.cmsrates = resdata[i]['commission_rate']
+            tpkitem.catid_id = catid
             tpkitem.status = 1
-            try:
-                tpkitem.save()
-            except Exception:
-                pass
+
+            tpkitem.save()
 
 
-    repeatstr = " [Already existed numid:" + str(repeatdata) + "]" if len(repeatdata)>0 else ""
+    repeatstr = " [Already existed numid:" + str(repeatdata) + "]" if len(repeatdata) > 0 else ""
     response.write("ok" + repeatstr)
     return response
 
-def managelistgrid(request):
 
+def managelistgrid(request):
     return render_to_response('admin/itemmanage.html')
 
-def managelistres(request):
-    itemlist = serializers.serialize("json",TbkTpItem.objects.all())
 
-    resp =  json.dumps(itemlist[0], sort_keys=True, indent=4, ensure_ascii=False)
+def managelistres(request):
+    itemlist = serializers.serialize("json", TbkTpItem.objects.all())
+    itl = json.loads(itemlist)
+    resp = json.dumps(itl, sort_keys=True, indent=4, ensure_ascii=False)
     return HttpResponse(resp)
 
 

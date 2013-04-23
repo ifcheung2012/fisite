@@ -216,6 +216,7 @@ toolbar = [
             var rows = $('#tbklistgrid').datagrid('getSelections');
             pubRow = new Object();
             pubRow["topublish"] = JSON.stringify(rows);
+            pubRow["cid"] = cid;
             /*$.post(
                 "http://127.0.0.1:8000/tbkitempublish",
                 pubRow,

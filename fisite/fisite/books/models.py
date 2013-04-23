@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 # Create your models here.
 
 class Publisher(models.Model):
@@ -16,6 +16,7 @@ class Author(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=40)
     email = models.EmailField('e-mail',blank=True)
+    added_by = models.ForeignKey(User,null = True,blank=True)
     def __unicode__(self):
         return self.first_name
 
@@ -27,6 +28,7 @@ class Book(models.Model):
     title = models.CharField(max_length=100)
     authors = models.ManyToManyField(Author)
     publisher = models.ForeignKey(Publisher)
+
     publication_date=models.DateField()
     objects=BookManager()
     def __unicode__(self):

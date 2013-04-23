@@ -31,7 +31,7 @@ class MyTop:
         req = top.api.TaobaokeItemsGetRequest(self.url, self.port)
         req.set_app_info(top.appinfo(self.appkey, self.secret))
         req.page_no = 2
-        req.page_size = 25
+        req.page_size = 30
         req.cid = cid
         req.fields = "num_iid,title,nick,pic_url,price,click_url,shop_click_url,item_location,seller_credit_score,commission,commission_rate,commission_num,commission_volume,volume,promotion_price"
         '''
