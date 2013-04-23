@@ -34,7 +34,7 @@ fab(500)
 e = time()
 print "use time:", e - s
 
-ls = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ls = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
 es = [11, 12, 13, 10]
 #for i, j in zip(ls, es):
 #    print ('%s %s' % (i, j))
