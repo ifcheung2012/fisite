@@ -42,7 +42,7 @@ class txtdboperator(object):
 
 
     def update(self, setvdict, **condition):     #support sql injection ,security? wow
-        recode = ('nomatched', ('matched', 'succeed update'), 'errorsfound')
+        recode = ('nomatched', ('matched', 'succeed update'), 'errorsfound101')
         msg = ''
         existrecode = -1
         if path.exists(self.db):
@@ -64,16 +64,17 @@ class txtdboperator(object):
 
                 wfileobj = open(self.db, 'w')
                 wfileobj.write('\n'.join(tmp) + '\n')
+                msg = ' and '.join(recode[1]) if existrecode == 0 else recode[0]
             except Exception:
                 msg = recode[2]
             finally:
                 wfileobj.close()
-                msg = ' and '.join(recode[1]) if existrecode == 0 else recode[0]
+
         return msg
 
 
     def insert(self,**linevalue):
-        recode = ('errorfound', 'succeed','lessvalueerror')
+        recode = ('errorfound102', 'succeed','lessvalueerror')
         msg = recode[1]
         if path.exists(self.db):
             try:
@@ -85,11 +86,12 @@ class txtdboperator(object):
                     lsoutput[col.index(k)] = linevalue[k]     #automatic insert in autoformat order.done!<== ls.append operating cant be in order!but y?-_-
                 fileobj = open(self.db, 'a')
                 fileobj.write('    '.join(lsoutput) + '\n')  #dbfile must end with '\n',otherwise you  know it!            except Exception:
-                msg = recode[1]  #can continue to return ?
-
+                msg = recode[1]
             finally:
                 fileobj.close()
+
         return msg
+
 
     def delete(self,**condition):
         col = linecache.getline(self.db, 1).split()
@@ -116,4 +118,5 @@ if __name__ == '__main__':
     #update
     # setvdict = {'expirydate': '2999-08-19', 'currency': 'RMB'}
     # opera.update(setvdict, currency='USD')
+
 
