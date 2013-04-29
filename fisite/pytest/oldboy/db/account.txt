@@ -1,0 +1,4 @@
+id    username    cardnumber        status
+1    ifcheung    687382738748334456    1
+2    zif         687323456455834456    1
+3    ifcheung    687346568743454887    1

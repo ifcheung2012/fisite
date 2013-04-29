@@ -1,0 +1,5 @@
+id username passwd sex status 
+编码 用户名  用户密码 性别  状态 
+1   ifcheung  123   male  1
+2   zif       1234  male  0
+3   if		  111   female 1
