@@ -10,6 +10,43 @@ class trans(object):
         self.name=name
         self.key= key
 
+    # def __call__(self,fn):
+    #     def validuser(self):
+    #         db = "db/userinfo.txt"
+    #         opera = txtdboperator(db)
+    #         return len(opera.select(username=self.name, passwd=self.key, status='1')) > 0
+    #     return validuser
+
+
+    def decovalidate(self):
+        def __decorator(f):
+            def decorator(*args,**kw):
+                exist =  self.validuser(self,self.name,self.key)
+                if not exist:
+                    return None
+                else:
+                    return f(*args,**kw)
+            return decorator
+        return __decorator
+
+    def validuser(self,username,userkey):
+        db = "db/userinfo.txt"
+        opera = txtdboperator(db)
+        return len(opera.select(username=self.name, passwd=self.key, status='1')) > 0
+
+    def getuseraccount(self):
+        db = "db/account.txt"
+        opera = txtdboperator(db)
+        res = opera.select(username=self.name,  status='1')[0][2]
+        return res
+
+    def changepasswd(self, newkey):
+        db = "db/userinfo.txt"
+        opera = txtdboperator(db)
+        setvdict = {'passwd': newkey}
+
+        return opera.update(setvdict, username=self.name, passwd=self.key,status='1')
+
 
     def getusertrans(self, cardnumber,sortby,startdate,enddate):
         db = "db/transmission.txt"
@@ -23,18 +60,6 @@ class trans(object):
                 ls.append(item)
         ls.sort(key= lambda obj:obj[col.index(sortby)])  #todo :cant sortby numberic compare
         return ls
-
-    def validuser(self):
-        db = "db/userinfo.txt"
-        opera = txtdboperator(db)
-        return len(opera.select(username=self.name, passwd=self.key, status='1')) > 0
-
-
-    def changepasswd(self, newkey):
-        db = "db/userinfo.txt"
-        opera = txtdboperator(db)
-        setvdict = {'passwd': newkey}
-        return opera.update(setvdict, username=self.name, passwd=self.key,status='1')
 
     def appendtrans(self,**linevalue):
         db = "db/transmission.txt"
@@ -77,15 +102,17 @@ class trans(object):
                      + self.counttransamount('amount',thismonthfirstday.strftime('%Y-%m-%d'),checkdate,cardnumber=cardnumber,ispayment='1')
 
         newbalance = balanceBF -payment + newcharges - adjustment + interest
-
-        return [newbalance,balanceBF,payment,newcharges,adjustment,interest]
+        dictres = {}
+        dictres["newbalance"],dictres["balanceBF"],dictres["payment"],dictres["newcharges"],dictres["adjustment"],\
+                dictres["interest"]=newbalance,balanceBF,payment,newcharges,adjustment,interest
+        return dictres
 
     def accountreduce(self,currency,amount,cardnumber,area,descriptioin,ispayment='0'):
         msg = ('errorfound201','succeed','notenoughcredit')
         cfgs = atmconfigparser()
         creditlimit = string.atof(cfgs.getcreditlimit())
 
-        acc = creditlimit - self.getusercurrentinfo(cardnumber)[0]
+        acc = creditlimit - self.getusercurrentinfo(cardnumber)["newbalance"]
         if acc >= string.atof(amount):
             date = datetime.datetime.now().strftime('%Y-%m-%d')
             time = datetime.datetime.now().strftime('%Y-%m-%d-%H:%M:%S')
@@ -107,7 +134,7 @@ class trans(object):
         time = datetime.datetime.now().strftime('%Y-%m-%d-%H:%M:%S')        #maybe a bug,this time ==time in reducefunc?
         try:
             self.accountreduce(currency,amount,cardnumber,area,'withdraw-cash','0')
-            self.accountreduce(currency,amount,cardnumber,area,'withdraw-cashservice-charge','0')
+            self.accountreduce(currency,servicecharge,cardnumber,area,'withdraw-cashservice-charge','0')
             return msg[1]
         except Exception:
             self.rollbacktrans(time=time)
@@ -124,20 +151,5 @@ class trans(object):
             self.rollbacktrans(time=time)
             return msg[0]
 
-if __name__ == '__main__':
-    trans = trans('if','1256')
-    #trans.withdrawcash('USD','50','687382738748334456','NANJING')
-    #all input must be in string format
-    # ls = trans.getusertrans('687382738748334456','date_trans','2012-02-01','2014-09-09')
-    # for k in ls:
-    #     print k
-    # print '------------'
-    # ls2 = trans.getuserleft('687382738748334456')
-    # for k in ls2:
-    #     print k
-    #
-    # date = datetime.datetime.now()
-    print trans.getusercurrentinfo('687382738748334456')
-    print trans.payment('RMB','5000','687382738748334456','nanjing')
-    #print trans.accountreduce('RMB','5000','687382738748334456','nanjing','xiaofei')
+
 

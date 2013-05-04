@@ -18,12 +18,15 @@ class txtdboperator(object):
         dict2 = {}
         for item in list:
             for k in dict:
+
                 if item == dict[k]:
-                    colindex = list.index(item)
+                    colindex = list.index(item)     #todo:there is a bug:when two columns has the same value,var colindex will be incorrect!
                     col = linecache.getline(self.db, 1).split()
 
                     if col[colindex] == k:
                         dict2[k] = dict[k]
+                        # print dict2[k] , dict[k]
+
         return cmp(dict2, dict)
 
     def select(self, **condition):
@@ -52,7 +55,9 @@ class txtdboperator(object):
                 tmp = []
                 for line in fileobj:
                     lineinfo = line.split()
+
                     cmp = self.lineincondition(lineinfo, condition)
+
                     if cmp == 0:
                         existrecode = 0
                         col = linecache.getline(self.db, 1).split()
@@ -98,25 +103,7 @@ class txtdboperator(object):
         dic = {}.fromkeys(col,'')              #second param cant be None,otherwise fileobj writeerrors
         return self.update(dic, **condition)
 
-if __name__ == '__main__':
 
-    # db = "userinfo1.txt"
-    db = "db/userinfo.txt"
-    opera = txtdboperator(db)
 
-    #select
-    # opera.select(currency='USD',expirydate='2999-09-19')
-    #print opera.select(sex="female")
-
-    #insert
-    # msg = "USD   		1.0000		2999-09-99"
-    # opera.insert(msg)
-
-    #delete
-    # opera.delete(currency='DE')
-
-    #update
-    # setvdict = {'expirydate': '2999-08-19', 'currency': 'RMB'}
-    # opera.update(setvdict, currency='USD')
 
 

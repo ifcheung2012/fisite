@@ -1,6 +1,6 @@
 id   currency  exchangerate   expirydate   status
 编号   币种       汇率         失效日期      状态
-1		RMB   		1.0000		2999-09-19      1
+6		RMB   		1.0000		2999-09-19      1
 2		RMB   		1.0000		2009-09-19      0
 3		USD	 		6.6000		2999-09-19      1
 4		DE    		8.0000		2013-05-20      1
