@@ -45,3 +45,6 @@ date_trans    date_post    descriptioin    currency    amount    cardnumber    a
 2013-05-04    2013-05-04    withdraw-cash    RMB    100    687382738748334456    NANJING    100    2013-05-04-15:16:32    0
 2013-05-04    2013-05-04    withdraw-cashservice-charge    RMB    5.0    687382738748334456    NANJING    5.0    2013-05-04-15:16:32    0
 2013-05-04    2013-05-04    payment    RMB    -123.0    687382738748334456    NANJING    -123.0    2013-05-04-15:22:48    1
+2013-05-06    2013-05-06    withdraw-cash    RMB    124    687382738748334456    NANJING    124    2013-05-06-15:27:11    0
+2013-05-06    2013-05-06    withdraw-cashservice-charge    RMB    6.2    687382738748334456    NANJING    6.2    2013-05-06-15:27:11    0
+2013-05-06    2013-05-06    payment    RMB    -1000.0    687382738748334456    NANJING    -1000.0    2013-05-06-15:27:52    1

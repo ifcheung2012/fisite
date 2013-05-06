@@ -1,3 +1,3 @@
 id    username    passwd    sex    status
-100    zc    123    male    1
-200    if    123    male    1
+1    if    1234    male    1
+2    zif    1234    male    1

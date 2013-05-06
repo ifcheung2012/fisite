@@ -12,6 +12,7 @@ def printmainmenu():
     print '2. Credit Card Payment,PRESS \'b\''
     print '3. Check Credit Card Transaction,PRESS \'t\''
     print '4. Change Password,PRESS \'p\''
+
 def payment(username,key):
     transm = trans(username,key)
     account = transm.getuseraccount()
@@ -31,19 +32,20 @@ def printaccount(username,key):
     transm = trans(username,key)
     account = transm.getuseraccount()
     dictres = transm.getusercurrentinfo(account)
-
+    print '------your account tranmissions------'
     print str(dictres)[1:-1]
     print "still payback total:",dictres["newbalance"],'=',dictres["balanceBF"],'-',dictres["payment"],'+',dictres["newcharges"],'-',dictres["adjustment"], \
         '+',dictres["interest"]
     ls = transm.getusertrans('687382738748334456','date_trans','2012-02-01','2014-09-09')
+    print 'date_trans','date_post','descriptioin','currency','amount','cardnumber','area','trans','transamount','time','ispayment'
     for k in ls:
-        print k
+        print str(k)[1:-1]
     print '------------'
 
 def changepasswd(username,key):
     transm = trans(username,key)
     newpass = raw_input('pleas input your passwd:')
-    return transm.changepasswd(newpass)
+    print transm.changepasswd(newpass)
 
 menu = {'w':withdrawcash,'t':printaccount,'p':changepasswd,'b':payment}
 
@@ -65,23 +67,6 @@ def mainfunc():
             print 'please make a valide choice:'
             pass
 
-
-# a = 2
-def deco(a=1):
-    def bf_f(f):
-        def decorator():
-            if a == 1:
-                print "before\n"
-                f()
-                print "after \n"
-            else:
-                return None
-        return decorator
-    return bf_f
-
-@deco(a=2)
-def hello_world():
-    print ('helloworld!\n')
 
 if __name__ == '__main__':
     mainfunc()

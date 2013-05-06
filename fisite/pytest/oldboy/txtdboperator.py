@@ -12,36 +12,35 @@ class txtdboperator(object):
 
     def validatedb(self):   #1,line endwith '\n' <== EOF, 2,valid colum and value ; 3, remove empty line
         return  False
+    def lineincondition(self,line,dict):
+        colinfo = linecache.getline(self.db,1).split()
+        if line.strip()!='':
+            lineinfo = line.split()
+            res = []
+            for k in dict:
+                kindex=colinfo.index(k)
+                if lineinfo[kindex]!=dict[k]:
+                    break
+                else:
+                    res.append(k)
+            return lineinfo if len(res)==len(dict) else None
+        return None
+
 
     #not only get  line matched,but also let in matched column
-    def lineincondition(self, list, dict):
-        dict2 = {}
-        for item in list:
-            for k in dict:
-
-                if item == dict[k]:
-                    colindex = list.index(item)     #todo:there is a bug:when two columns has the same value,var colindex will be incorrect!
-                    col = linecache.getline(self.db, 1).split()
-
-                    if col[colindex] == k:
-                        dict2[k] = dict[k]
-                        # print dict2[k] , dict[k]
-
-        return cmp(dict2, dict)
-
     def select(self, **condition):
         ls = []
         if path.exists(self.db):
             fileobj = open(self.db, 'r')
             try:
-                for line in fileobj:        #todo : use regex grep excluded lines .
-                    lineinfo = line.split()
-                    cmp = self.lineincondition(lineinfo, condition)
-                    if cmp == 0:
+                for line in fileobj:
+                    lineinfo = self.lineincondition(line,condition)
+                    if lineinfo:
                         ls.append(lineinfo)
             finally:
                 fileobj.close()
         return ls
+
 
 
     def update(self, setvdict, **condition):     #support sql injection ,security? wow
@@ -49,31 +48,33 @@ class txtdboperator(object):
         msg = ''
         existrecode = -1
         if path.exists(self.db):
-
-            try:
-                fileobj = open(self.db, 'r+')
-                tmp = []
-                for line in fileobj:
-                    lineinfo = line.split()
-
-                    cmp = self.lineincondition(lineinfo, condition)
-
-                    if cmp == 0:
+            fileobj = open(self.db, 'r+')
+            tmp = []
+            colinfo = linecache.getline(self.db,1).split()
+            for line in fileobj:
+                lineinfo1 = line.split()
+                if line.strip()!='':
+                    lineinfo = self.lineincondition(line,condition)
+                    if lineinfo:
                         existrecode = 0
-                        col = linecache.getline(self.db, 1).split()
-                        for k in setvdict:
-                            lineinfo[col.index(k)] = setvdict[k]
-                    tmp.append('    '.join(lineinfo))
-                fileobj.truncate(0)
+                        for k in condition:
+                            kindex=colinfo.index(k)
+                            for vk in setvdict:
+                                if k == vk:
+                                    lineinfo[kindex]=setvdict[vk]
+                        tmp.append('    '.join(lineinfo))
+                    else:
+                        tmp.append('    '.join(lineinfo1))
+            msg = ' and '.join(recode[1]) if existrecode == 0 else recode[0]
+            if existrecode == -1:
                 fileobj.close()
+                return msg
+            fileobj.truncate(0)
+            fileobj.close()
+            wfileobj = open(self.db, 'w')
+            wfileobj.write('\n'.join(tmp) + '\n')
 
-                wfileobj = open(self.db, 'w')
-                wfileobj.write('\n'.join(tmp) + '\n')
-                msg = ' and '.join(recode[1]) if existrecode == 0 else recode[0]
-            except Exception:
-                msg = recode[2]
-            finally:
-                wfileobj.close()
+            wfileobj.close()
 
         return msg
 
