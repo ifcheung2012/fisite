@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: gbk -*-
 from txtdboperator import txtdboperator
 import linecache
@@ -9,25 +10,6 @@ class trans(object):
     def __init__(self,name,key):
         self.name=name
         self.key= key
-
-    # def __call__(self,fn):
-    #     def validuser(self):
-    #         db = "db/userinfo.txt"
-    #         opera = txtdboperator(db)
-    #         return len(opera.select(username=self.name, passwd=self.key, status='1')) > 0
-    #     return validuser
-
-
-    def decovalidate(self):
-        def __decorator(f):
-            def decorator(*args,**kw):
-                exist =  self.validuser(self,self.name,self.key)
-                if not exist:
-                    return None
-                else:
-                    return f(*args,**kw)
-            return decorator
-        return __decorator
 
     def validuser(self,username,userkey):
         db = "db/userinfo.txt"
@@ -119,7 +101,7 @@ class trans(object):
             try:
                 self.appendtrans(date_trans=date,date_post=date,
                                  descriptioin=descriptioin,currency=currency,amount=amount,
-                                 cardnumber=cardnumber,area_trans=area,transamount=amount,time=time,ispayment=ispayment)  #its not recommended to rollback by time;id column is prefer
+                                 cardnumber=cardnumber,area_trans=area,transamount=amount,time=time,ispayment=ispayment)  #its not recommended to rollback by time;by id column is prefer
                 return msg[1]
             except Exception:
                 self.rollbacktrans(time=time)
@@ -133,8 +115,8 @@ class trans(object):
         servicecharge = str(string.atof(cfgs.getservicecharge())*string.atoi(amount))
         time = datetime.datetime.now().strftime('%Y-%m-%d-%H:%M:%S')        #maybe a bug,this time ==time in reducefunc?
         try:
-            self.accountreduce(currency,amount,cardnumber,area,'withdraw-cash','0')
-            self.accountreduce(currency,servicecharge,cardnumber,area,'withdraw-cashservice-charge','0')
+            self.accountreduce(currency,amount,cardnumber,area,'提现','0')
+            self.accountreduce(currency,servicecharge,cardnumber,area,'提现手续费','0')
             return msg[1]
         except Exception:
             self.rollbacktrans(time=time)
@@ -143,9 +125,9 @@ class trans(object):
     def payment(self,currency,amount,cardnumber,area):   #todo : not considered the currency and its exchange rate
         msg = ('errorfound203','succeed')
         cfgs = atmconfigparser()
-        time = datetime.datetime.now().strftime('%Y-%m-%d-%H:%M:%S')        #maybe a bug,this time ==time in reducefunc?
+        time = datetime.datetime.now().strftime('%Y-%m-%d-%H:%M:%S')        #maybe a bug,this time ==time in reducefunction?
         try:
-            self.accountreduce(currency,str(-string.atof(amount)),cardnumber,area,'payment','1')   #todo:not consider the rate if payment > creditlimmt
+            self.accountreduce(currency,str(-string.atof(amount)),cardnumber,area,'还款','1')   #todo:not consider the rate if payment > creditlimmt
             return msg[1]
         except Exception:
             self.rollbacktrans(time=time)
