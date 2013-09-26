@@ -59,3 +59,6 @@ print zs
 # print out_str
 #
 #
+userpass ={'stu389':'b9fb364fc2bc00f3','stu748':'d16ebab139574ede','stu328':'548a96cf6cab5481'}
+for dic in userpass:
+    print dic, userpass[dic]

@@ -1,5 +1,5 @@
 import os
-
+# -*- coding: utf8 -*-
 
 def lstree(currentPath, count):
     """docstring for lstree"""
@@ -18,4 +18,11 @@ def lstree(currentPath, count):
 
 
 if __name__ == '__main__':
-    lstree('/home/ifcheung/Desktop/Download/', 1)
+    # lstree('/home/ifcheung/Desktop/Download/', 1)
+    ls = '123','111178',123
+    lst = ['123','111178',123]
+    strk = 'workers'
+    print ls[0]
+    print lst[0]
+    print strk[1:-1]
+    print '一人    '

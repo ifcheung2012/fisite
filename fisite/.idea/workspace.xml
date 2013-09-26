@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c57a363-e1f7-4425-9e01-7f27e69db5d0" name="Default" comment="04.23 pm 21:05 1st from windows">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pytest/oldboy/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pytest/oldboy/atm_pro.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pytest/oldboy/baseoperator.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pytest/oldboy/txtdboperator.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pytest/oldboy/userinfo.txt" />
-      <change type="DELETED" beforePath="D:\workspace\fisite\fisite\fisite\pytest\oldboy\contact_list.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\fisite\fisite\fisite\pytest\oldboy\contact_query.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pytest/__init__.py" afterPath="$PROJECT_DIR$/pytest/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pytest/oldboy/tomato/daemon.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pytest/oldboy/mutipy.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pytest/tomatorequest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pytest/oldboy/http/urllib.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/vagrant.xml" />
+      <change type="DELETED" beforePath="D:\workspace\fisite\fisite\fisite\pytest\oldboy\userinfo.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pytest/1.py" afterPath="$PROJECT_DIR$/pytest/1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/encodings.xml" afterPath="$PROJECT_DIR$/../.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/fisite.iml" afterPath="$PROJECT_DIR$/../.idea/fisite.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pytest/ls.py" afterPath="$PROJECT_DIR$/pytest/ls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/misc.xml" afterPath="$PROJECT_DIR$/../.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fisite.iws" />
@@ -26,7 +29,7 @@
     <file path="/urls.py" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1366197242341" ignored="false" />
     <file path="/views.py" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1366198869776" ignored="false" />
     <file path="/datagrid_self_json1.json" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1365419194803" ignored="false" />
-    <file path="/Dummy.txt" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1367108468567" ignored="false" />
+    <file path="/Dummy.txt" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1380195147145" ignored="false" />
     <file path="$PROJECT_DIR$/../../django-blog-zinnia/zinnia/admin/forms.py" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1365402869145" ignored="false" />
     <file path="/forms.py" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1365402847551" ignored="false" />
     <file path="/tbkitemlistgrid.js" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1365831126099" ignored="false" />
@@ -40,7 +43,7 @@
     <file path="/a.py" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1365668931426" ignored="false" />
     <file path="/a.html" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1365668936678" ignored="false" />
     <file path="/search_form.html" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1365683478832" ignored="false" />
-    <file path="/1.py" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1365688796681" ignored="false" />
+    <file path="/1.py" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1369629950857" ignored="false" />
     <file path="/dummy.sql" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1365740895337" ignored="false" />
     <file path="/a.sql" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1365740895337" ignored="false" />
     <file path="/Django Console" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1365748217193" ignored="false" />
@@ -59,6 +62,16 @@
     <file path="/atm_pro.py" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1366878434126" ignored="false" />
     <file path="/baseoperator.py" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1367128316798" ignored="false" />
     <file path="/txtdboperator.py" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1367127985234" ignored="false" />
+    <file path="/Python Console" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1369449838438" ignored="false" />
+    <file path="/bak.py" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1369127070421" ignored="false" />
+    <file path="/pop.py" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1368932760389" ignored="false" />
+    <file path="/ftp.py" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1369445405059" ignored="false" />
+    <file path="/autoftp.py" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1369449479379" ignored="false" />
+    <file path="/tb2.py" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1369467526677" ignored="false" />
+    <file path="/mutipy.py" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1369554843967" ignored="false" />
+    <file path="/urllib.py" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1369556141952" ignored="false" />
+    <file path="/daemon.py" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1369657149563" ignored="false" />
+    <file path="/test22.py" changelist="2c57a363-e1f7-4425-9e01-7f27e69db5d0" time="1370578792279" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,30 +96,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="atm_pro.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pytest/oldboy/atm_pro.py">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fisite/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="48" selection-end="107" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="baseoperator.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pytest/oldboy/baseoperator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="14" selection-start="41" selection-end="41" vertical-scroll-proportion="0.032894738">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="txtdboperator.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pytest/oldboy/txtdboperator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="4" selection-start="2975" selection-end="3001" vertical-scroll-proportion="0.0">
+            <state line="121" column="20" selection-start="4196" selection-end="4196" vertical-scroll-proportion="0.2223667">
               <folding>
-                <element signature="e#50#69#0" expanded="true" />
+                <element signature="e#0#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,30 +125,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/fisite/templates/admin/base_site.html" />
-        <option value="$PROJECT_DIR$/fisite/templates/admin/topitems/app_index.html" />
-        <option value="$PROJECT_DIR$/fisite/views.py" />
-        <option value="$PROJECT_DIR$/fisite/topitems/models.py" />
-        <option value="$PROJECT_DIR$/fisite/books/models.py" />
-        <option value="$PROJECT_DIR$/fisite/books/admin.py" />
-        <option value="$PROJECT_DIR$/manage.py" />
-        <option value="$PROJECT_DIR$/fisite/urls.py" />
-        <option value="$PROJECT_DIR$/fisite/settings.py" />
-        <option value="$PROJECT_DIR$/pytest/oldboy/contact_query.py" />
-        <option value="$PROJECT_DIR$/pytest/oldboy/atm_pro.py" />
         <option value="$PROJECT_DIR$/pytest/__init__.py" />
         <option value="$PROJECT_DIR$/pytest/oldboy/__init__.py" />
         <option value="$PROJECT_DIR$/pytest/oldboy/userinfo.txt" />
         <option value="$PROJECT_DIR$/pytest/oldboy/txtdboperator.py" />
         <option value="$PROJECT_DIR$/pytest/oldboy/baseoperator.py" />
+        <option value="$PROJECT_DIR$/pytest/oldboy/l03/pop.py" />
+        <option value="$PROJECT_DIR$/pytest/oldboy/l03/bak.py" />
+        <option value="$PROJECT_DIR$/pytest/oldboy/ftp.py" />
+        <option value="$PROJECT_DIR$/pytest/oldboy/autoftp.py" />
+        <option value="$PROJECT_DIR$/fisite/topsdk/tb2.py" />
+        <option value="$PROJECT_DIR$/pytest/oldboy/mutipy.py" />
+        <option value="$PROJECT_DIR$/pytest/oldboy/http/urllib.py" />
+        <option value="$PROJECT_DIR$/pytest/1.py" />
+        <option value="$PROJECT_DIR$/pytest/oldboy/tomato/daemon.py" />
+        <option value="$PROJECT_DIR$/pytest/test22.py" />
+        <option value="$PROJECT_DIR$/pytest/tomatorequest.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="681" />
-    <option name="y" value="20" />
-    <option name="width" value="1203" />
-    <option name="height" value="888" />
+    <option name="x" value="826" />
+    <option name="y" value="15" />
+    <option name="width" value="1082" />
+    <option name="height" value="964" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -211,28 +206,6 @@
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 2.7.3 (D:/Python27/python.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fisite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 2.7.3 (D:/Python27/python.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -254,7 +227,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pytest" />
+              <option name="myItemId" value="fisite" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -269,6 +242,146 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="topsdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fisite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -281,14 +394,14 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="121" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="145" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="137" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="137" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pytest/oldboy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../django-exadmin-master/django-exadmin-master/demo_app" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="148" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="942" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="937" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="942" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="143" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="139" />
@@ -301,11 +414,11 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="fileTemplates" />
+    <property name="options.lastSelected" value="com.jetbrains.django.DjangoModulesConfigurable" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -329,13 +442,65 @@
       <recent name="$PROJECT_DIR$/fisite" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\fisite\fisite\fisite\pytest\oldboy" />
       <recent name="$PROJECT_DIR$/fisite/templates/admin" />
       <recent name="$PROJECT_DIR$/fisite/static/fisite/js/admin" />
       <recent name="$PROJECT_DIR$/pytest" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.txtdboperator">
-    <configuration default="false" name="classtmp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Django server.fisite">
+    <configuration default="false" name="tb2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fisite/topsdk" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <module name="fisite" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fisite/topsdk/tb2.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="urllib" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pytest/oldboy/http" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <module name="fisite" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pytest/oldboy/http/urllib.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="daemon" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pytest/oldboy/tomato" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <module name="fisite" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pytest/oldboy/tomato/daemon.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -346,75 +511,24 @@
       <option name="IS_MODULE_SDK" value="true" />
       <module name="fisite" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pytest/classtmp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pytest/1.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="contact_query" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="tomatorequest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pytest/oldboy" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pytest" />
       <option name="IS_MODULE_SDK" value="true" />
       <module name="fisite" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pytest/oldboy/contact_query.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="atm_pro" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pytest/oldboy" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <module name="fisite" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pytest/oldboy/atm_pro.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="baseoperator" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pytest/oldboy" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <module name="fisite" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pytest/oldboy/baseoperator.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="txtdboperator" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pytest/oldboy" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <module name="fisite" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pytest/oldboy/txtdboperator.py" />
+      <option name="SCRIPT_NAME" value="D:\workspace\fisite\fisite\fisite\pytest\tomatorequest.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -467,27 +581,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/bin/python2.7" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <module name="fisite" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -507,6 +600,27 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="fisite" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -547,23 +661,6 @@
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
-    <configuration default="false" name="record" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pytest" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <module name="fisite" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pytest/record.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
     <configuration default="false" name="fisite" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -585,8 +682,10 @@
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
       <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonCover" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonCover" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -598,6 +697,23 @@
       </JSRemoteDebuggerConfigurationSettings>
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="record" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pytest" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <module name="fisite" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pytest/record.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
     <configuration default="false" name="oscrss" type="PythonConfigurationType" factoryName="Python">
@@ -618,23 +734,23 @@
       <method />
     </configuration>
     <list size="9">
-      <item index="0" class="java.lang.String" itemvalue="Python.record" />
-      <item index="1" class="java.lang.String" itemvalue="Django server.fisite" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.fisite JavaScript" />
+      <item index="0" class="java.lang.String" itemvalue="Django server.fisite" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.fisite JavaScript" />
+      <item index="2" class="java.lang.String" itemvalue="Python.record" />
       <item index="3" class="java.lang.String" itemvalue="Python.oscrss" />
-      <item index="4" class="java.lang.String" itemvalue="Python.classtmp" />
-      <item index="5" class="java.lang.String" itemvalue="Python.contact_query" />
-      <item index="6" class="java.lang.String" itemvalue="Python.atm_pro" />
-      <item index="7" class="java.lang.String" itemvalue="Python.baseoperator" />
-      <item index="8" class="java.lang.String" itemvalue="Python.txtdboperator" />
+      <item index="4" class="java.lang.String" itemvalue="Python.tb2" />
+      <item index="5" class="java.lang.String" itemvalue="Python.urllib" />
+      <item index="6" class="java.lang.String" itemvalue="Python.daemon" />
+      <item index="7" class="java.lang.String" itemvalue="Python.1" />
+      <item index="8" class="java.lang.String" itemvalue="Python.tomatorequest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.txtdboperator" />
-        <item index="1" class="java.lang.String" itemvalue="Python.baseoperator" />
-        <item index="2" class="java.lang.String" itemvalue="Python.atm_pro" />
-        <item index="3" class="java.lang.String" itemvalue="Python.contact_query" />
-        <item index="4" class="java.lang.String" itemvalue="Python.classtmp" />
+        <item index="0" class="java.lang.String" itemvalue="Python.tomatorequest" />
+        <item index="1" class="java.lang.String" itemvalue="Python.1" />
+        <item index="2" class="java.lang.String" itemvalue="Python.daemon" />
+        <item index="3" class="java.lang.String" itemvalue="Python.urllib" />
+        <item index="4" class="java.lang.String" itemvalue="Python.tb2" />
       </list>
     </recent_temporary>
   </component>
@@ -699,7 +815,11 @@
       <created>1366722349927</created>
       <updated>1366722349927</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="05.25 pm 21:05 1st from windows">
+      <created>1369448901555</created>
+      <updated>1369448901555</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -723,24 +843,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="681" y="20" width="1203" height="888" extended-state="0" />
-    <editor active="true" />
+    <frame x="826" y="15" width="1082" height="964" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32795697" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36290324" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32605729" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18495297" sideWeight="0.66263443" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17893218" sideWeight="0.6571429" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33391762" sideWeight="0.6575716" order="0" side_tool="false" content_ui="combo" x="1026" y="320" width="220" height="529" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26078433" sideWeight="0.7268232" order="0" side_tool="false" content_ui="combo" x="1026" y="320" width="220" height="529" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39443743" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3424284" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33296338" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27317676" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32614556" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="938" y="217" width="934" height="708" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="938" y="217" width="934" height="708" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32605729" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279503" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -786,7 +906,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="04.23 pm 21:05 1st from windows" />
+    <option name="LAST_COMMIT_MESSAGE" value="05.25 pm 21:05 1st from windows" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -805,6 +925,7 @@
     <MESSAGE value="04.12pm" />
     <MESSAGE value="04.12pm refreshed" />
     <MESSAGE value="04.23 pm 21:05 1st from windows" />
+    <MESSAGE value="05.25 pm 21:05 1st from windows" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -830,93 +951,89 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fisite/settings.py">
+    <entry file="file://$PROJECT_DIR$/pytest/record.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="64" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0" />
+        <state line="7" column="18" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pytest/test22.py">
+    <entry file="file://$PROJECT_DIR$/pytest/pt2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="14" column="0" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pytest/user.py">
+    <entry file="file://$PROJECT_DIR$/pytest/dict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="11" column="23" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pytest/tb.py">
+    <entry file="file://$PROJECT_DIR$/pytest/personcoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="16" selection-start="493" selection-end="493" vertical-scroll-proportion="0.34042552" />
+        <state line="14" column="16" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pytest/oldboy/atm_pro.py">
+    <entry file="file://$PROJECT_DIR$/pytest/oldboy/tomato/daemon.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="48" selection-end="107" vertical-scroll-proportion="0.0">
+        <state line="31" column="19" selection-start="945" selection-end="945" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fisite/topitems/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="12" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fisite/topitems/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="19" selection-start="686" selection-end="686" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pytest/ls.py">
+    <entry file="file://$PROJECT_DIR$/fisite/templates/admin/adminindex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="6" selection-start="511" selection-end="537" vertical-scroll-proportion="0.39693594" />
+        <state line="70" column="25" selection-start="5674" selection-end="5674" vertical-scroll-proportion="29.541666" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fisite/__init__.py">
+    <entry file="file://$PROJECT_DIR$/fisite/templates/admin/actions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="15" column="6" selection-start="1094" selection-end="1094" vertical-scroll-proportion="-9.375" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pytest/__init__.py">
+    <entry file="file://$PROJECT_DIR$/fisite/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="20" column="63" selection-start="587" selection-end="631" vertical-scroll-proportion="0.40650406" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pytest/oldboy/__init__.py">
+    <entry file="file://$PROJECT_DIR$/fisite/templates/admin/itemmanage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="10" column="50" selection-start="635" selection-end="763" vertical-scroll-proportion="-6.25" />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm20/system/python_stubs/1494736245/__builtin__.py">
+    <entry file="file://$PROJECT_DIR$/fisite/static/fisite/js/admin/itemmanage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="272" column="24" selection-start="8361" selection-end="8361" vertical-scroll-proportion="0.10638298" />
+        <state line="35" column="49" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://D:/Python27/Lib/site-packages/django/conf/__init__.py">
+    <entry file="file://$PROJECT_DIR$/fisite/topsdk/tbk.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="16" selection-start="4470" selection-end="4470" vertical-scroll-proportion="0.021276595" />
+        <state line="31" column="19" selection-start="877" selection-end="877" vertical-scroll-proportion="0.6208278" />
       </provider>
     </entry>
-    <entry file="file://D:/Python27/Lib/site-packages/django/http/__init__.py">
+    <entry file="file://$PROJECT_DIR$/fisite/topsdk/tb2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="14" selection-start="4593" selection-end="4593" vertical-scroll-proportion="0.021276595" />
+        <state line="98" column="10" selection-start="3299" selection-end="3299" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pytest/oldboy/userinfo.txt">
+    <entry file="file://$PROJECT_DIR$/fisite/static/fisite/js/admin/tbkitemlistgrid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="29" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0626741" />
+        <state line="295" column="0" selection-start="10167" selection-end="10167" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fisite/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="14" selection-start="146" selection-end="146" vertical-scroll-proportion="0.033860046">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pytest/oldboy/txtdboperator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="4" selection-start="2975" selection-end="3001" vertical-scroll-proportion="0.0">
+        <state line="121" column="20" selection-start="4196" selection-end="4196" vertical-scroll-proportion="0.2223667">
           <folding>
-            <element signature="e#50#69#0" expanded="true" />
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pytest/oldboy/baseoperator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="14" selection-start="41" selection-end="41" vertical-scroll-proportion="0.032894738">
-          <folding />
         </state>
       </provider>
     </entry>
